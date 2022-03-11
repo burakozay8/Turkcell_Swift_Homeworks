@@ -1,0 +1,20 @@
+PODS:
+  - DropDown (2.3.13)
+  - SCLAlertView (0.8)
+
+DEPENDENCIES:
+  - DropDown
+  - SCLAlertView
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - SCLAlertView
+
+SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+
+PODFILE CHECKSUM: 899fd0f91ec579ad2de2297d4438e96ccf857b4d
+
+COCOAPODS: 1.11.2

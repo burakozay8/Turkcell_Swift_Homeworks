@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4201983D27C3F0FA00D4FD1B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201983C27C3F0FA00D4FD1B /* HomeViewController.swift */; };
+		4201983F27C414D300D4FD1B /* ExpeditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201983E27C414D300D4FD1B /* ExpeditionViewController.swift */; };
+		4201984127C41A9400D4FD1B /* ExpeditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201984027C41A9400D4FD1B /* ExpeditionCell.swift */; };
+		4210E4CF27BBBD3900DF5FFB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210E4CE27BBBD3900DF5FFB /* UIColorExtension.swift */; };
+		42251B0C27C6613B00D17D79 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42251B0B27C6613B00D17D79 /* OnboardingSlide.swift */; };
+		42251B0E27C663A200D17D79 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42251B0D27C663A200D17D79 /* OnboardingViewController.swift */; };
+		42251B1027C6667D00D17D79 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42251B0F27C6667D00D17D79 /* OnboardingCell.swift */; };
+		42A4938027BAB8E70080ED04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4937F27BAB8E70080ED04 /* AppDelegate.swift */; };
+		42A4938227BAB8E70080ED04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4938127BAB8E70080ED04 /* SceneDelegate.swift */; };
+		42A4938427BAB8E70080ED04 /* SeatSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4938327BAB8E70080ED04 /* SeatSelectionViewController.swift */; };
+		42A4938727BAB8E70080ED04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A4938527BAB8E70080ED04 /* Main.storyboard */; };
+		42A4938A27BAB8E70080ED04 /* BusSeatApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42A4938827BAB8E70080ED04 /* BusSeatApp.xcdatamodeld */; };
+		42A4938C27BAB8EB0080ED04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A4938B27BAB8EB0080ED04 /* Assets.xcassets */; };
+		42A4938F27BAB8EB0080ED04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A4938D27BAB8EB0080ED04 /* LaunchScreen.storyboard */; };
+		42A4939727BABD990080ED04 /* LeftSeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4939627BABD990080ED04 /* LeftSeatCell.swift */; };
+		42A4939927BABDAD0080ED04 /* RightSeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4939827BABDAD0080ED04 /* RightSeatCell.swift */; };
+		42A4939B27BAD1A00080ED04 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4939A27BAD1A00080ED04 /* UIViewExtension.swift */; };
+		42A4939D27BAD4CB0080ED04 /* TicketControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4939C27BAD4CB0080ED04 /* TicketControlViewController.swift */; };
+		42A493A227BAE8780080ED04 /* TicketDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A493A127BAE8780080ED04 /* TicketDetailsViewController.swift */; };
+		4F65BE026D28621CE45279ED /* Pods_BusSeatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1290F89D4D8C41E7A1CE1428 /* Pods_BusSeatApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1290F89D4D8C41E7A1CE1428 /* Pods_BusSeatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusSeatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4201983C27C3F0FA00D4FD1B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4201983E27C414D300D4FD1B /* ExpeditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpeditionViewController.swift; sourceTree = "<group>"; };
+		4201984027C41A9400D4FD1B /* ExpeditionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpeditionCell.swift; sourceTree = "<group>"; };
+		4210E4CE27BBBD3900DF5FFB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		42251B0B27C6613B00D17D79 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		42251B0D27C663A200D17D79 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		42251B0F27C6667D00D17D79 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		42A4937C27BAB8E70080ED04 /* BusSeatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusSeatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A4937F27BAB8E70080ED04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42A4938127BAB8E70080ED04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		42A4938327BAB8E70080ED04 /* SeatSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectionViewController.swift; sourceTree = "<group>"; };
+		42A4938627BAB8E70080ED04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42A4938927BAB8E70080ED04 /* BusSeatApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusSeatApp.xcdatamodel; sourceTree = "<group>"; };
+		42A4938B27BAB8EB0080ED04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42A4938E27BAB8EB0080ED04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42A4939027BAB8EC0080ED04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A4939627BABD990080ED04 /* LeftSeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSeatCell.swift; sourceTree = "<group>"; };
+		42A4939827BABDAD0080ED04 /* RightSeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSeatCell.swift; sourceTree = "<group>"; };
+		42A4939A27BAD1A00080ED04 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		42A4939C27BAD4CB0080ED04 /* TicketControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketControlViewController.swift; sourceTree = "<group>"; };
+		42A493A127BAE8780080ED04 /* TicketDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailsViewController.swift; sourceTree = "<group>"; };
+		73581DF207AEBD1E71B1B017 /* Pods-BusSeatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusSeatApp.debug.xcconfig"; path = "Target Support Files/Pods-BusSeatApp/Pods-BusSeatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D3EF3A1417F680CD5BE54DF7 /* Pods-BusSeatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusSeatApp.release.xcconfig"; path = "Target Support Files/Pods-BusSeatApp/Pods-BusSeatApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42A4937927BAB8E70080ED04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F65BE026D28621CE45279ED /* Pods_BusSeatApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		207982791F1D21DD883A933C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73581DF207AEBD1E71B1B017 /* Pods-BusSeatApp.debug.xcconfig */,
+				D3EF3A1417F680CD5BE54DF7 /* Pods-BusSeatApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		42251B0A27C6612200D17D79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42251B0B27C6613B00D17D79 /* OnboardingSlide.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42A4937327BAB8E70080ED04 = {
+			isa = PBXGroup;
+			children = (
+				42A4937E27BAB8E70080ED04 /* BusSeatApp */,
+				42A4937D27BAB8E70080ED04 /* Products */,
+				207982791F1D21DD883A933C /* Pods */,
+				76DACB67F0772787F01267AC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		42A4937D27BAB8E70080ED04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42A4937C27BAB8E70080ED04 /* BusSeatApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42A4937E27BAB8E70080ED04 /* BusSeatApp */ = {
+			isa = PBXGroup;
+			children = (
+				42251B0A27C6612200D17D79 /* Model */,
+				42A493A327BAECA50080ED04 /* Application */,
+				42A493A027BADB780080ED04 /* Extension */,
+				42A4939E27BADB410080ED04 /* Cell */,
+				42A4939F27BADB590080ED04 /* Controller */,
+				42A493A427BAECEF0080ED04 /* View */,
+				42A4939027BAB8EC0080ED04 /* Info.plist */,
+				42A4938B27BAB8EB0080ED04 /* Assets.xcassets */,
+				42A4938827BAB8E70080ED04 /* BusSeatApp.xcdatamodeld */,
+			);
+			path = BusSeatApp;
+			sourceTree = "<group>";
+		};
+		42A4939E27BADB410080ED04 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				42251B0F27C6667D00D17D79 /* OnboardingCell.swift */,
+				4201984027C41A9400D4FD1B /* ExpeditionCell.swift */,
+				42A4939627BABD990080ED04 /* LeftSeatCell.swift */,
+				42A4939827BABDAD0080ED04 /* RightSeatCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		42A4939F27BADB590080ED04 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				42251B0D27C663A200D17D79 /* OnboardingViewController.swift */,
+				4201983C27C3F0FA00D4FD1B /* HomeViewController.swift */,
+				4201983E27C414D300D4FD1B /* ExpeditionViewController.swift */,
+				42A4938327BAB8E70080ED04 /* SeatSelectionViewController.swift */,
+				42A4939C27BAD4CB0080ED04 /* TicketControlViewController.swift */,
+				42A493A127BAE8780080ED04 /* TicketDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		42A493A027BADB780080ED04 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				42A4939A27BAD1A00080ED04 /* UIViewExtension.swift */,
+				4210E4CE27BBBD3900DF5FFB /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		42A493A327BAECA50080ED04 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				42A4937F27BAB8E70080ED04 /* AppDelegate.swift */,
+				42A4938127BAB8E70080ED04 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		42A493A427BAECEF0080ED04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42A4938527BAB8E70080ED04 /* Main.storyboard */,
+				42A4938D27BAB8EB0080ED04 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76DACB67F0772787F01267AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1290F89D4D8C41E7A1CE1428 /* Pods_BusSeatApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42A4937B27BAB8E70080ED04 /* BusSeatApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A4939327BAB8EC0080ED04 /* Build configuration list for PBXNativeTarget "BusSeatApp" */;
+			buildPhases = (
+				33E76823C0BEB79870472BE6 /* [CP] Check Pods Manifest.lock */,
+				42A4937827BAB8E70080ED04 /* Sources */,
+				42A4937927BAB8E70080ED04 /* Frameworks */,
+				42A4937A27BAB8E70080ED04 /* Resources */,
+				2969A55E89F916F389AA4B52 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BusSeatApp;
+			productName = BusSeatApp;
+			productReference = 42A4937C27BAB8E70080ED04 /* BusSeatApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42A4937427BAB8E70080ED04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					42A4937B27BAB8E70080ED04 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 42A4937727BAB8E70080ED04 /* Build configuration list for PBXProject "BusSeatApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42A4937327BAB8E70080ED04;
+			productRefGroup = 42A4937D27BAB8E70080ED04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42A4937B27BAB8E70080ED04 /* BusSeatApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42A4937A27BAB8E70080ED04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42A4938F27BAB8EB0080ED04 /* LaunchScreen.storyboard in Resources */,
+				42A4938C27BAB8EB0080ED04 /* Assets.xcassets in Resources */,
+				42A4938727BAB8E70080ED04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2969A55E89F916F389AA4B52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusSeatApp/Pods-BusSeatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusSeatApp/Pods-BusSeatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BusSeatApp/Pods-BusSeatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33E76823C0BEB79870472BE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BusSeatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42A4937827BAB8E70080ED04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42251B1027C6667D00D17D79 /* OnboardingCell.swift in Sources */,
+				42A4939D27BAD4CB0080ED04 /* TicketControlViewController.swift in Sources */,
+				42A4938427BAB8E70080ED04 /* SeatSelectionViewController.swift in Sources */,
+				42A4938027BAB8E70080ED04 /* AppDelegate.swift in Sources */,
+				42A4939727BABD990080ED04 /* LeftSeatCell.swift in Sources */,
+				42A4939927BABDAD0080ED04 /* RightSeatCell.swift in Sources */,
+				42A4939B27BAD1A00080ED04 /* UIViewExtension.swift in Sources */,
+				42A493A227BAE8780080ED04 /* TicketDetailsViewController.swift in Sources */,
+				4201983D27C3F0FA00D4FD1B /* HomeViewController.swift in Sources */,
+				4201984127C41A9400D4FD1B /* ExpeditionCell.swift in Sources */,
+				4210E4CF27BBBD3900DF5FFB /* UIColorExtension.swift in Sources */,
+				42251B0C27C6613B00D17D79 /* OnboardingSlide.swift in Sources */,
+				42251B0E27C663A200D17D79 /* OnboardingViewController.swift in Sources */,
+				4201983F27C414D300D4FD1B /* ExpeditionViewController.swift in Sources */,
+				42A4938227BAB8E70080ED04 /* SceneDelegate.swift in Sources */,
+				42A4938A27BAB8E70080ED04 /* BusSeatApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42A4938527BAB8E70080ED04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42A4938627BAB8E70080ED04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42A4938D27BAB8EB0080ED04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42A4938E27BAB8EB0080ED04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42A4939127BAB8EC0080ED04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		42A4939227BAB8EC0080ED04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42A4939427BAB8EC0080ED04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73581DF207AEBD1E71B1B017 /* Pods-BusSeatApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SDQUVG68VJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BusSeatApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.burakozay.BusSeatApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42A4939527BAB8EC0080ED04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3EF3A1417F680CD5BE54DF7 /* Pods-BusSeatApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SDQUVG68VJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BusSeatApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.burakozay.BusSeatApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42A4937727BAB8E70080ED04 /* Build configuration list for PBXProject "BusSeatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A4939127BAB8EC0080ED04 /* Debug */,
+				42A4939227BAB8EC0080ED04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42A4939327BAB8EC0080ED04 /* Build configuration list for PBXNativeTarget "BusSeatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A4939427BAB8EC0080ED04 /* Debug */,
+				42A4939527BAB8EC0080ED04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		42A4938827BAB8E70080ED04 /* BusSeatApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				42A4938927BAB8E70080ED04 /* BusSeatApp.xcdatamodel */,
+			);
+			currentVersion = 42A4938927BAB8E70080ED04 /* BusSeatApp.xcdatamodel */;
+			path = BusSeatApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 42A4937427BAB8E70080ED04 /* Project object */;
+}
