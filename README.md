@@ -1,6 +1,6 @@
 # Turkcell_Homeworks
-# Bus Seat App
-<img src="https://github.com/burakozay8/Turkcell_Homeworks/blob/main/BusSeatApp/busseatapp.gif" width="250" height="500"/>
+# Video Games App
+<img src="https://github.com/burakozay8/Turkcell_Swift_Homeworks/blob/main/VideoGamesApp/VideoGamesApp.gif" width="225" height="450"/>
 
 
 
