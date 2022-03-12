@@ -26,6 +26,10 @@
 		423D777A27D631D8001C68B1 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423D777927D631D8001C68B1 /* GameDetail.swift */; };
 		423FE79227D7A81E003B66B6 /* NoResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423FE79127D7A81E003B66B6 /* NoResultView.xib */; };
 		423FE79427D7A83F003B66B6 /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FE79327D7A83F003B66B6 /* NoResultView.swift */; };
+		425B3A9327DCBC2900D1EB93 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3A9227DCBC2900D1EB93 /* UIColor.swift */; };
+		425B3A9527DCBEBD00D1EB93 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3A9427DCBEBD00D1EB93 /* String.swift */; };
+		425B3A9727DCC44900D1EB93 /* NoFavGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3A9627DCC44900D1EB93 /* NoFavGameView.swift */; };
+		425B3A9927DCC46300D1EB93 /* NoFavGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425B3A9827DCC46300D1EB93 /* NoFavGameView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		423D777927D631D8001C68B1 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		423FE79127D7A81E003B66B6 /* NoResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoResultView.xib; sourceTree = "<group>"; };
 		423FE79327D7A83F003B66B6 /* NoResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultView.swift; sourceTree = "<group>"; };
+		425B3A9227DCBC2900D1EB93 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		425B3A9427DCBEBD00D1EB93 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		425B3A9627DCC44900D1EB93 /* NoFavGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavGameView.swift; sourceTree = "<group>"; };
+		425B3A9827DCC46300D1EB93 /* NoFavGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoFavGameView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,8 @@
 			children = (
 				423D777327D51AF5001C68B1 /* UIImageView.swift */,
 				423D777527D522EF001C68B1 /* UIView.swift */,
+				425B3A9227DCBC2900D1EB93 /* UIColor.swift */,
+				425B3A9427DCBEBD00D1EB93 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -166,6 +176,8 @@
 			children = (
 				423FE79127D7A81E003B66B6 /* NoResultView.xib */,
 				423FE79327D7A83F003B66B6 /* NoResultView.swift */,
+				425B3A9627DCC44900D1EB93 /* NoFavGameView.swift */,
+				425B3A9827DCC46300D1EB93 /* NoFavGameView.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -231,6 +243,7 @@
 				423FE79227D7A81E003B66B6 /* NoResultView.xib in Resources */,
 				423D775727D3BDD5001C68B1 /* LaunchScreen.storyboard in Resources */,
 				423D775427D3BDD5001C68B1 /* Assets.xcassets in Resources */,
+				425B3A9927DCC46300D1EB93 /* NoFavGameView.xib in Resources */,
 				423D774F27D3BDCE001C68B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +260,7 @@
 				423D776E27D4C885001C68B1 /* FavoriteGameCell.swift in Sources */,
 				423D774827D3BDCE001C68B1 /* AppDelegate.swift in Sources */,
 				423FE79427D7A83F003B66B6 /* NoResultView.swift in Sources */,
+				425B3A9327DCBC2900D1EB93 /* UIColor.swift in Sources */,
 				423D777A27D631D8001C68B1 /* GameDetail.swift in Sources */,
 				423D777627D522EF001C68B1 /* UIView.swift in Sources */,
 				423D776827D3D92F001C68B1 /* Game.swift in Sources */,
@@ -255,8 +269,10 @@
 				423D774A27D3BDCE001C68B1 /* SceneDelegate.swift in Sources */,
 				423D776527D3D904001C68B1 /* GameRequest.swift in Sources */,
 				423D775F27D3C0D1001C68B1 /* FavoritesViewController.swift in Sources */,
+				425B3A9527DCBEBD00D1EB93 /* String.swift in Sources */,
 				423D775227D3BDCE001C68B1 /* VideoGamesApp.xcdatamodeld in Sources */,
 				423D777827D6175B001C68B1 /* GameDetailsViewController.swift in Sources */,
+				425B3A9727DCC44900D1EB93 /* NoFavGameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

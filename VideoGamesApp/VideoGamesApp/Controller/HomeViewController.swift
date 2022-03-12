@@ -24,14 +24,15 @@ class HomeViewController: UIViewController {
         }
     }
     var filteredGames = [GameResult]()
-    var isFiltering: Bool = false
     var gameDetail: GameDetail?
+    var isFiltering: Bool = false
     var currentPage = 0 {
         didSet {
             pageControl.currentPage = currentPage
         }
     }
     var noResultView: NoResultView!
+    var customGray = UIColor(rgb: 0x373737)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,7 @@ class HomeViewController: UIViewController {
             }
         
         }
-    
+        
         configureNavigationIcon()
 
     }
@@ -65,10 +66,11 @@ class HomeViewController: UIViewController {
     }
     
     private func configureSearchBar() {
-        searchBar.searchTextField.backgroundColor = .systemGray4
-        searchBar.searchTextField.leftView?.tintColor = .darkGray
+        searchBar.searchTextField.backgroundColor = customGray
+        searchBar.searchTextField.leftView?.tintColor = .systemGray4
+        searchBar.searchTextField.textColor = .white
         searchBar.backgroundImage = UIImage()
-        searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
+        searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search", attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemGray4])
     }
 
 }
@@ -252,6 +254,7 @@ extension HomeViewController: UISearchBarDelegate {
             
             topCollectionView.reloadData()
             bottomCollectionView.reloadData()
+            
             searchBar.endEditing(true)
         }
     

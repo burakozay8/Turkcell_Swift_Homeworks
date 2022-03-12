@@ -47,7 +47,7 @@ override func viewWillAppear(_ animated: Bool) {
         detailGameNameLabel.text = gameDetail?.name
         detailGameDateLabel.text = "Release Date: " + gameDetail!.released
         detailGameRateLabel.text = "Metacritic: " + "\((gameDetail?.metacritic)!)"
-        detailDescriptionLabel.text = gameDetail?.description
+        detailDescriptionLabel.text = gameDetail?.description.html2String
         detailGameImage.loadFrom(URLAddress: gameDetail!.background_image)
         
     }
@@ -114,7 +114,7 @@ override func viewWillAppear(_ animated: Bool) {
     
    private func checkGameIsInFavorites(id: Int) -> Bool {
         
-        var checkBool: Bool = false
+        var isFavorite: Bool = false
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
         let context = appDelegate.persistentContainer.viewContext
@@ -125,7 +125,7 @@ override func viewWillAppear(_ animated: Bool) {
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
                     if result.value(forKey: "id") as! Int == gameDetail!.id {
-                         checkBool = true
+                         isFavorite = true
                     } else {
                         print("false control")
                     }
@@ -137,7 +137,7 @@ override func viewWillAppear(_ animated: Bool) {
             print("Couldn't fetch data.")
         }
         
-        return checkBool
+        return isFavorite
         
     }
     

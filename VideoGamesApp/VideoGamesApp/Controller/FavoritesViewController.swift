@@ -20,6 +20,7 @@ class FavoritesViewController: UIViewController {
             }
         }
     }
+    var noFavGameView: NoFavGameView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,21 @@ class FavoritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.getFavoriteGames()
+        
+        if favoriteGames.count == 0 {
+            collectionView.isHidden = true
+            if noFavGameView != nil && !noFavGameView.contentView.isHidden {
+                noFavGameView?.removeFromSuperview()
+            }
+            noFavGameView = NoFavGameView(frame: CGRect(x: 0, y: 40, width: self.view.frame.width, height: self.view.frame.height))
+            self.view.addSubview(noFavGameView)
+            
+        } else {
+            noFavGameView?.removeFromSuperview()
+            collectionView.isHidden = false
+            collectionView.reloadData()
+        }
+        
     }
     
     private func configureNavigationIcon() {
@@ -90,8 +106,6 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
         
         return cell
     }
-    
-
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailGameRequest = GameRequest(slug: favoriteGames[indexPath.row].slug)

@@ -226,7 +226,7 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="b40-5h-34S">
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.015682408589999999" green="0.01568849944" blue="0.01568202674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
@@ -242,16 +242,16 @@
                         <color key="backgroundColor" red="0.015682408589999999" green="0.01568849944" blue="0.01568202674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fUA-t9-E0X" firstAttribute="top" secondItem="b40-5h-34S" secondAttribute="bottom" multiplier="0.9" constant="16" id="2rK-iJ-CE2"/>
-                            <constraint firstItem="b40-5h-34S" firstAttribute="trailing" secondItem="fUA-t9-E0X" secondAttribute="trailing" id="6wY-bV-Cct"/>
-                            <constraint firstItem="fUA-t9-E0X" firstAttribute="trailing" secondItem="Ft4-hN-u9L" secondAttribute="trailing" id="7IX-Tg-zc6"/>
+                            <constraint firstItem="QYR-LF-ldQ" firstAttribute="trailing" secondItem="fUA-t9-E0X" secondAttribute="trailing" id="6wY-bV-Cct"/>
+                            <constraint firstItem="QYR-LF-ldQ" firstAttribute="trailing" secondItem="Ft4-hN-u9L" secondAttribute="trailing" id="7IX-Tg-zc6"/>
+                            <constraint firstItem="jgW-kE-zIO" firstAttribute="centerX" secondItem="KLg-oA-Of3" secondAttribute="centerX" id="W9O-Yz-qaJ"/>
                             <constraint firstItem="b40-5h-34S" firstAttribute="leading" secondItem="KLg-oA-Of3" secondAttribute="leading" id="cAE-cI-gQj"/>
-                            <constraint firstItem="fUA-t9-E0X" firstAttribute="centerX" secondItem="jgW-kE-zIO" secondAttribute="centerX" id="gsK-lp-PGv"/>
                             <constraint firstItem="b40-5h-34S" firstAttribute="top" secondItem="QYR-LF-ldQ" secondAttribute="top" id="hU7-58-AYL"/>
                             <constraint firstItem="Ft4-hN-u9L" firstAttribute="bottom" secondItem="QYR-LF-ldQ" secondAttribute="bottom" id="hmV-a6-Z0o"/>
                             <constraint firstAttribute="trailing" secondItem="b40-5h-34S" secondAttribute="trailing" id="m6v-v5-ts4"/>
-                            <constraint firstItem="b40-5h-34S" firstAttribute="leading" secondItem="fUA-t9-E0X" secondAttribute="leading" id="pOL-R5-ibB"/>
+                            <constraint firstItem="QYR-LF-ldQ" firstAttribute="leading" secondItem="fUA-t9-E0X" secondAttribute="leading" id="pOL-R5-ibB"/>
                             <constraint firstItem="jgW-kE-zIO" firstAttribute="top" secondItem="fUA-t9-E0X" secondAttribute="bottom" id="q8M-OW-brX"/>
-                            <constraint firstItem="fUA-t9-E0X" firstAttribute="leading" secondItem="Ft4-hN-u9L" secondAttribute="leading" id="vXw-7N-yTd"/>
+                            <constraint firstItem="QYR-LF-ldQ" firstAttribute="leading" secondItem="Ft4-hN-u9L" secondAttribute="leading" id="vXw-7N-yTd"/>
                             <constraint firstItem="Ft4-hN-u9L" firstAttribute="top" secondItem="jgW-kE-zIO" secondAttribute="bottom" constant="20" id="vZV-fB-Y23"/>
                         </constraints>
                     </view>
@@ -265,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeo-UI-1Rw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426.0869565217392" y="-108.48214285714285"/>
+            <point key="canvasLocation" x="1641" y="-108"/>
         </scene>
         <!--Game Details View Controller-->
         <scene sceneID="ebt-Um-q0P">
