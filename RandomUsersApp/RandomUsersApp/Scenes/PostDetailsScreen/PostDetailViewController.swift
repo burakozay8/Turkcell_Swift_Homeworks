@@ -26,7 +26,7 @@ class PostDetailViewController: UIViewController {
     }
     
     @IBAction func readCommentsButtonAction(_ sender: Any) {
-        
+        //
     }
     
 }

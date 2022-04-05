@@ -17,6 +17,7 @@ protocol PostDetailViewModelDelegate {
 }
 
 final class PostDetailViewModel {
+    
     var delegate: PostDetailViewModelDelegate? //weak var izin vermiyor.
     private var userPost: UserPost
     
