@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -95,13 +94,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4x-10-f9Z">
-                                <rect key="frame" x="20" y="44" width="374" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <rect key="frame" x="20" y="44" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0u3-Zp-S9U">
-                                <rect key="frame" x="0.0" y="75.5" width="414" height="786.5"/>
+                                <rect key="frame" x="0.0" y="78" width="414" height="784"/>
                                 <color key="backgroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ynd-Yq-WdX">
                                     <size key="itemSize" width="128" height="128"/>
@@ -153,18 +152,72 @@
                     <view key="view" contentMode="scaleToFill" id="sik-jW-RAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2a3-TA-7cN">
+                                <rect key="frame" x="20" y="64" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0TM-vU-gna">
+                                <rect key="frame" x="20" y="150.5" width="374" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunt aut facere repellat provident occaecati excepturi optio reprehenderit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-o6-eFs">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="132"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" red="0.452675879" green="0.4177849293" blue="0.95481663939999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-n3-Mvu">
+                                        <rect key="frame" x="0.0" y="132" width="374" height="118"/>
+                                        <string key="text">quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="3KA-gq-iIO"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFF-oC-ffX">
+                                <rect key="frame" x="20" y="460.5" width="374" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fph-bq-aIl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Read Comments">
+                                    <color key="baseForegroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.17660507559999999" green="0.24987280370000001" blue="0.45323020219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="readCommentsButtonAction:" destination="aVr-FN-OE6" eventType="touchUpInside" id="cUk-l5-pqG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jag-JN-rOe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rFF-oC-ffX" firstAttribute="top" secondItem="0TM-vU-gna" secondAttribute="bottom" constant="60" id="BnY-jg-Jjj"/>
+                            <constraint firstItem="jag-JN-rOe" firstAttribute="trailing" secondItem="0TM-vU-gna" secondAttribute="trailing" constant="20" id="OvN-1I-lnl"/>
+                            <constraint firstItem="0TM-vU-gna" firstAttribute="leading" secondItem="jag-JN-rOe" secondAttribute="leading" constant="20" id="d7z-7j-ODS"/>
+                            <constraint firstItem="rFF-oC-ffX" firstAttribute="leading" secondItem="jag-JN-rOe" secondAttribute="leading" constant="20" id="dvQ-qg-Hq4"/>
+                            <constraint firstItem="2a3-TA-7cN" firstAttribute="leading" secondItem="jag-JN-rOe" secondAttribute="leading" constant="20" id="fnJ-8B-u9X"/>
+                            <constraint firstItem="jag-JN-rOe" firstAttribute="trailing" secondItem="rFF-oC-ffX" secondAttribute="trailing" constant="20" id="h2F-fP-zAQ"/>
+                            <constraint firstItem="jag-JN-rOe" firstAttribute="trailing" secondItem="2a3-TA-7cN" secondAttribute="trailing" constant="20" id="hsN-ak-fOE"/>
+                            <constraint firstItem="2a3-TA-7cN" firstAttribute="top" secondItem="jag-JN-rOe" secondAttribute="top" constant="20" id="j1o-uq-imz"/>
+                            <constraint firstItem="0TM-vU-gna" firstAttribute="top" secondItem="2a3-TA-7cN" secondAttribute="bottom" constant="60" id="kxO-k0-VUu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bodyLabel" destination="bBf-n3-Mvu" id="GPI-DA-roV"/>
+                        <outlet property="readCommentsButton" destination="rFF-oC-ffX" id="4x6-rB-hRQ"/>
+                        <outlet property="titleLabel" destination="WhD-o6-eFs" id="pwC-vk-ero"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNb-oL-cKC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2493" y="82"/>
+            <point key="canvasLocation" x="2492.753623188406" y="81.696428571428569"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

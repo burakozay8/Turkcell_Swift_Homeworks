@@ -28,6 +28,12 @@ class UserPostsViewController: UIViewController, LoadingShowable {
     func set(viewModel: UserPostsViewModelProtocol) {
         self.viewModel = viewModel
     }
+    
+    private func styleBackItem() {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Posts"
+        navigationItem.backBarButtonItem = backItem
+    }
         
 }
 
@@ -45,6 +51,17 @@ extension UserPostsViewController: UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let userPost = viewModel?.userPost(at: indexPath.row) else { return }
+        let postDetailViewModel = PostDetailViewModel(userPost: userPost)
+        
+        styleBackItem()
+        
+        guard let postDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostDetailViewController") as? PostDetailViewController else { return }
+        postDetailVC.set(viewModel: postDetailViewModel)
+        navigationController?.pushViewController(postDetailVC, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 60, height: 70) //baska cihazda calıstır.
     }
@@ -60,6 +77,7 @@ extension UserPostsViewController: UICollectionViewDelegate, UICollectionViewDat
 }
 
 extension UserPostsViewController: UserPostsViewModelDelegate {
+    
     func showLoadingView() {
         showLoading()
     }
