@@ -14,6 +14,7 @@ protocol LoadingShowable where Self: UIViewController {
 }
 
 extension LoadingShowable {
+    
     func showLoading() {
         LoadingView.shared.startLoading()
     }
@@ -21,4 +22,5 @@ extension LoadingShowable {
     func hideLoading() {
         LoadingView.shared.hideLoading()
     }
+    
 }

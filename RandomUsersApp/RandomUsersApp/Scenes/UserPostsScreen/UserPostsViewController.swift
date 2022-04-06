@@ -10,7 +10,7 @@ import UIKit
 class UserPostsViewController: UIViewController, LoadingShowable {
     
     @IBOutlet weak var userPostsCollectionView: UICollectionView!
-    @IBOutlet weak var userIDLabel: UILabel! // !!
+    @IBOutlet weak var headerLabel: UILabel!
     
     private var viewModel: UserPostsViewModelProtocol?
 
@@ -22,6 +22,7 @@ class UserPostsViewController: UIViewController, LoadingShowable {
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel?.load()
+        viewModel?.loadUserName()
     }
     
     func set(viewModel: UserPostsViewModelProtocol) {
@@ -76,6 +77,10 @@ extension UserPostsViewController: UICollectionViewDelegate, UICollectionViewDat
 }
 
 extension UserPostsViewController: UserPostsViewModelDelegate {
+    
+    func showUserName(userName: String?) {
+        headerLabel.text = (userName ?? "") + "'s" + " " + "Posts"
+    }
     
     func showLoadingView() {
         showLoading()

@@ -11,7 +11,7 @@ final class UserListViewController: UIViewController, LoadingShowable {
 
     @IBOutlet weak var userListCollectionView: UICollectionView!
     
-    private var viewModel: UserListViewModelProtocol = UserListViewModel() //dene
+    private var viewModel: UserListViewModelProtocol = UserListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,8 @@ extension UserListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let userID = viewModel.user(at: indexPath.row)?.id else { return }
-        let userPostsViewModel = UserPostsViewModel(userID: userID)
+        guard let userName = viewModel.user(at: indexPath.row)?.name else { return }
+        let userPostsViewModel = UserPostsViewModel(userID: userID, userName: userName)
         
         guard let userPostsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserPostsViewController") as? UserPostsViewController else { return }
         userPostsVC.set(viewModel: userPostsViewModel)
@@ -50,7 +51,7 @@ extension UserListViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 60, height: 80) //baska cihazda calıstır.
+        CGSize(width: UIScreen.main.bounds.width - 60, height: 80)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

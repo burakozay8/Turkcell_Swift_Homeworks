@@ -24,12 +24,16 @@ final class UserListViewModel {
     
     private var users: [User] = []
     weak var delegate: UserListViewModelDelegate?
-    var service: UserServiceProtocol = UserService()
+    private var service: UserServiceProtocol?
+    
+    init(service: UserServiceProtocol = UserService()) {
+        self.service = service
+    }
     
     fileprivate func fetchUsers() {
         
         delegate?.showLoadingView()
-        service.getUserList { [weak self] result in
+        service?.getUserList { [weak self] result in
             guard let self = self else { return }
             self.delegate?.hideLoadingView()
             switch result {

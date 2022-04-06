@@ -12,12 +12,15 @@ protocol UserPostsViewModelProtocol {
     var numberOfItems: Int { get }
     func load()
     func userPost(at index: Int) -> UserPost?
+    func loadUserName()
 }
 
 protocol UserPostsViewModelDelegate: AnyObject {
     func showLoadingView()
     func hideLoadingView()
     func reloadData()
+    func showUserName(userName: String?)
+    
 }
 
 final class UserPostsViewModel {
@@ -26,10 +29,12 @@ final class UserPostsViewModel {
     private var userPosts: [UserPost] = []
     private var service: UserServiceProtocol?
     private var userID: Int?
+    private var userName: String?
     
-    init(userID: Int, service: UserServiceProtocol = UserService()) {
+    init(userID: Int, userName: String, service: UserServiceProtocol = UserService()) {
         self.userID = userID
         self.service = service
+        self.userName = userName
     }
     
     fileprivate func fetchUserPosts() {
@@ -50,6 +55,10 @@ final class UserPostsViewModel {
 }
 
 extension UserPostsViewModel: UserPostsViewModelProtocol {
+    
+    func loadUserName() {
+        delegate?.showUserName(userName: userName)
+    }
     
     var numberOfItems: Int {
         userPosts.count

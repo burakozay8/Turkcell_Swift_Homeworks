@@ -13,7 +13,6 @@ class UserPostCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configure(userPost: UserPost) {

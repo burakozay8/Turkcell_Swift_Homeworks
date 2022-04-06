@@ -17,6 +17,7 @@ protocol UserServiceProtocol {
 class UserService: UserServiceProtocol {
 
     func getUserList(completion: @escaping (Result<[User], Error>) -> Void) {
+        
         let urlString = "https://jsonplaceholder.typicode.com/users"
         AF.request(urlString).responseData { response in
             switch response.result {
@@ -33,6 +34,7 @@ class UserService: UserServiceProtocol {
                 completion(.failure(error))
             }
         }
+        
     }
     
     func getUserPosts(userID: Int?, completion: @escaping (Result<[UserPost], Error>) -> Void) {
