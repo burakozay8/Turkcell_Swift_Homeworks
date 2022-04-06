@@ -28,7 +28,7 @@ final class UserListViewModel {
     
     fileprivate func fetchUsers() {
         
-        self.delegate?.showLoadingView()
+        delegate?.showLoadingView()
         service.getUserList { [weak self] result in
             guard let self = self else { return }
             self.delegate?.hideLoadingView()

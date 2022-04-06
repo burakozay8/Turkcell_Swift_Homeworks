@@ -163,13 +163,13 @@
                                 <rect key="frame" x="20" y="150.5" width="374" height="250"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunt aut facere repellat provident occaecati excepturi optio reprehenderit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-o6-eFs">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="132"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="89.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" red="0.452675879" green="0.4177849293" blue="0.95481663939999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-n3-Mvu">
-                                        <rect key="frame" x="0.0" y="132" width="374" height="118"/>
+                                        <rect key="frame" x="0.0" y="89.5" width="374" height="160.5"/>
                                         <string key="text">quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,6 +218,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNb-oL-cKC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2492.753623188406" y="81.696428571428569"/>
+        </scene>
+        <!--Post Comments View Controller-->
+        <scene sceneID="8yQ-uY-X7P">
+            <objects>
+                <viewController storyboardIdentifier="PostCommentsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ea7-LC-2aV" customClass="PostCommentsViewController" customModule="RandomUsersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zba-IT-e5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r6n-Zl-qqP">
+                                <rect key="frame" x="0.0" y="78" width="414" height="784"/>
+                                <color key="backgroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hMo-CW-yeg">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NH7-ic-VPw">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uKP-Dh-25e">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ea7-LC-2aV" id="Zfh-xK-MVg"/>
+                                    <outlet property="delegate" destination="Ea7-LC-2aV" id="cQH-5T-ZxO"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-YH-9t3">
+                                <rect key="frame" x="20" y="44" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QUn-xs-YYp"/>
+                        <color key="backgroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r6n-Zl-qqP" firstAttribute="trailing" secondItem="QUn-xs-YYp" secondAttribute="trailing" id="2zr-a5-ape"/>
+                            <constraint firstItem="r6n-Zl-qqP" firstAttribute="top" secondItem="bgP-YH-9t3" secondAttribute="bottom" constant="10" id="5Zs-B7-vzM"/>
+                            <constraint firstItem="bgP-YH-9t3" firstAttribute="top" secondItem="QUn-xs-YYp" secondAttribute="top" id="PHA-Cd-i6O"/>
+                            <constraint firstItem="QUn-xs-YYp" firstAttribute="trailing" secondItem="bgP-YH-9t3" secondAttribute="trailing" constant="20" id="XCx-TY-gHG"/>
+                            <constraint firstItem="r6n-Zl-qqP" firstAttribute="leading" secondItem="QUn-xs-YYp" secondAttribute="leading" id="hHm-dd-ETx"/>
+                            <constraint firstItem="QUn-xs-YYp" firstAttribute="bottom" secondItem="r6n-Zl-qqP" secondAttribute="bottom" id="i4M-Wx-60X"/>
+                            <constraint firstItem="bgP-YH-9t3" firstAttribute="leading" secondItem="QUn-xs-YYp" secondAttribute="leading" constant="20" id="lTZ-Ym-6hv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="postCommentsCollectionView" destination="r6n-Zl-qqP" id="41O-PI-nmS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omk-CM-HJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3250.7246376811595" y="81.696428571428569"/>
         </scene>
     </scenes>
 </document>

@@ -10,7 +10,7 @@ import UIKit
 class UserPostsViewController: UIViewController, LoadingShowable {
     
     @IBOutlet weak var userPostsCollectionView: UICollectionView!
-    @IBOutlet weak var userIDLabel: UILabel! //
+    @IBOutlet weak var userIDLabel: UILabel! // !!
     
     private var viewModel: UserPostsViewModelProtocol?
 
@@ -18,7 +18,6 @@ class UserPostsViewController: UIViewController, LoadingShowable {
         super.viewDidLoad()
         viewModel?.delegate = self
         userPostsCollectionView.register(cellType: UserPostCell.self)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,7 +87,7 @@ extension UserPostsViewController: UserPostsViewModelDelegate {
     
     
     func reloadData() {
-        self.userPostsCollectionView.reloadData()
+        userPostsCollectionView.reloadData()
     }
     
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425D0D8727FD97EA001AC9C2 /* PostCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D0D8627FD97EA001AC9C2 /* PostCommentsViewController.swift */; };
+		425D0D8927FD9806001AC9C2 /* PostCommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D0D8827FD9806001AC9C2 /* PostCommentsViewModel.swift */; };
+		425D0D8C27FDA54F001AC9C2 /* PostCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D0D8A27FDA54F001AC9C2 /* PostCommentCell.swift */; };
+		425D0D8D27FDA54F001AC9C2 /* PostCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425D0D8B27FDA54F001AC9C2 /* PostCommentCell.xib */; };
 		426CD39C27F9A87E009B1D54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426CD39B27F9A87E009B1D54 /* AppDelegate.swift */; };
 		426CD39E27F9A87E009B1D54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426CD39D27F9A87E009B1D54 /* SceneDelegate.swift */; };
 		426CD3A027F9A87E009B1D54 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426CD39F27F9A87E009B1D54 /* UserListViewController.swift */; };
@@ -19,6 +23,8 @@
 		426CD3B927F9AA03009B1D54 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426CD3B827F9AA03009B1D54 /* UserService.swift */; };
 		426CD3BC27F9AB8D009B1D54 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 426CD3BB27F9AB8D009B1D54 /* Alamofire */; };
 		426CD3C027F9AFA7009B1D54 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426CD3BF27F9AFA7009B1D54 /* UserListViewModel.swift */; };
+		4285B7FF27FDB2BA004827A3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285B7FE27FDB2BA004827A3 /* String.swift */; };
+		42B12FA427FCA7060087BF3E /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B12FA327FCA7060087BF3E /* PostComment.swift */; };
 		42FA625627F9BB24007BFD4F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA625427F9BB24007BFD4F /* UserCell.swift */; };
 		42FA625727F9BB24007BFD4F /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FA625527F9BB24007BFD4F /* UserCell.xib */; };
 		42FA625927F9C144007BFD4F /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA625827F9C144007BFD4F /* UICollectionView.swift */; };
@@ -37,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		425D0D8627FD97EA001AC9C2 /* PostCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewController.swift; sourceTree = "<group>"; };
+		425D0D8827FD9806001AC9C2 /* PostCommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewModel.swift; sourceTree = "<group>"; };
+		425D0D8A27FDA54F001AC9C2 /* PostCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentCell.swift; sourceTree = "<group>"; };
+		425D0D8B27FDA54F001AC9C2 /* PostCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCommentCell.xib; sourceTree = "<group>"; };
 		426CD39827F9A87E009B1D54 /* RandomUsersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUsersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426CD39B27F9A87E009B1D54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		426CD39D27F9A87E009B1D54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +60,8 @@
 		426CD3B627F9A9D9009B1D54 /* Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
 		426CD3B827F9AA03009B1D54 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		426CD3BF27F9AFA7009B1D54 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		4285B7FE27FDB2BA004827A3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		42B12FA327FCA7060087BF3E /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
 		42FA625427F9BB24007BFD4F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		42FA625527F9BB24007BFD4F /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		42FA625827F9C144007BFD4F /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
@@ -79,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		425D0D8527FD977B001AC9C2 /* PostCommentsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				425D0D8627FD97EA001AC9C2 /* PostCommentsViewController.swift */,
+				425D0D8827FD9806001AC9C2 /* PostCommentsViewModel.swift */,
+			);
+			path = PostCommentsScreen;
+			sourceTree = "<group>";
+		};
 		426CD38F27F9A87E009B1D54 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +148,7 @@
 			children = (
 				426CD3B427F9A963009B1D54 /* User.swift */,
 				42FA626027F9CC96007BFD4F /* UserPost.swift */,
+				42B12FA327FCA7060087BF3E /* PostComment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +159,7 @@
 				426CD3BE27F9AE63009B1D54 /* UserScreen */,
 				42FA626227F9CE54007BFD4F /* UserPostsScreen */,
 				42FA627227FC5939007BFD4F /* PostDetailsScreen */,
+				425D0D8527FD977B001AC9C2 /* PostCommentsScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -157,6 +180,8 @@
 				42FA625527F9BB24007BFD4F /* UserCell.xib */,
 				42FA626727FB08B2007BFD4F /* UserPostCell.swift */,
 				42FA626827FB08B2007BFD4F /* UserPostCell.xib */,
+				425D0D8A27FDA54F001AC9C2 /* PostCommentCell.swift */,
+				425D0D8B27FDA54F001AC9C2 /* PostCommentCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -187,6 +212,7 @@
 				42FA625A27F9C17E007BFD4F /* UICollectionViewCell.swift */,
 				42FA625C27F9C378007BFD4F /* Collection.swift */,
 				42FA627027FB3DD7007BFD4F /* UIView.swift */,
+				4285B7FE27FDB2BA004827A3 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -286,6 +312,7 @@
 				426CD3AB27F9A880009B1D54 /* LaunchScreen.storyboard in Resources */,
 				426CD3A827F9A880009B1D54 /* Assets.xcassets in Resources */,
 				426CD3A327F9A87E009B1D54 /* Main.storyboard in Resources */,
+				425D0D8D27FDA54F001AC9C2 /* PostCommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,16 +329,21 @@
 				42FA626627F9CEA9007BFD4F /* UserPostsViewModel.swift in Sources */,
 				42FA626C27FB0DA0007BFD4F /* LoadView.swift in Sources */,
 				426CD3C027F9AFA7009B1D54 /* UserListViewModel.swift in Sources */,
+				425D0D8927FD9806001AC9C2 /* PostCommentsViewModel.swift in Sources */,
 				42FA626127F9CC96007BFD4F /* UserPost.swift in Sources */,
 				42FA625D27F9C378007BFD4F /* Collection.swift in Sources */,
 				426CD3B727F9A9D9009B1D54 /* Decoders.swift in Sources */,
 				42FA626F27FB0DF4007BFD4F /* LoadingShowable.swift in Sources */,
 				426CD3A027F9A87E009B1D54 /* UserListViewController.swift in Sources */,
 				426CD39C27F9A87E009B1D54 /* AppDelegate.swift in Sources */,
+				425D0D8727FD97EA001AC9C2 /* PostCommentsViewController.swift in Sources */,
+				4285B7FF27FDB2BA004827A3 /* String.swift in Sources */,
 				42FA625B27F9C17E007BFD4F /* UICollectionViewCell.swift in Sources */,
 				42FA627127FB3DD7007BFD4F /* UIView.swift in Sources */,
 				42FA626427F9CE95007BFD4F /* UserPostsViewController.swift in Sources */,
 				42FA625627F9BB24007BFD4F /* UserCell.swift in Sources */,
+				425D0D8C27FDA54F001AC9C2 /* PostCommentCell.swift in Sources */,
+				42B12FA427FCA7060087BF3E /* PostComment.swift in Sources */,
 				426CD39E27F9A87E009B1D54 /* SceneDelegate.swift in Sources */,
 				42FA627427FC598D007BFD4F /* PostDetailViewController.swift in Sources */,
 				426CD3B527F9A963009B1D54 /* User.swift in Sources */,

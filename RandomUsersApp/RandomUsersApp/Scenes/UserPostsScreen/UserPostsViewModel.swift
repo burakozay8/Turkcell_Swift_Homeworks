@@ -33,7 +33,7 @@ final class UserPostsViewModel {
     }
     
     fileprivate func fetchUserPosts() {
-        self.delegate?.showLoadingView()
+        delegate?.showLoadingView()
         service?.getUserPosts(userID: userID) { [weak self] result in
             guard let self = self else { return }
             self.delegate?.hideLoadingView()

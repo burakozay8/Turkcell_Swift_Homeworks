@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserListViewController: UIViewController, LoadingShowable {
+final class UserListViewController: UIViewController, LoadingShowable {
 
     @IBOutlet weak var userListCollectionView: UICollectionView!
     
@@ -74,7 +74,7 @@ extension UserListViewController: UserListViewModelDelegate {
     }
     
     func reloadData() {
-        self.userListCollectionView.reloadData()
+        userListCollectionView.reloadData()
     }
     
 }

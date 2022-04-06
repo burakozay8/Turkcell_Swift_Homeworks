@@ -25,8 +25,23 @@ class PostDetailViewController: UIViewController {
         self.viewModel = viewModel
     }
     
+    private func styleBackItem() {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Post Detail"
+        navigationItem.backBarButtonItem = backItem
+    }
+    
     @IBAction func readCommentsButtonAction(_ sender: Any) {
-        //
+        
+        guard let postID = viewModel?.postID() else { return }
+        let postCommentsViewModel = PostCommentsViewModel(postID: postID)
+        
+        styleBackItem()
+        
+        guard let postCommentsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostCommentsViewController") as? PostCommentsViewController else { return }
+        postCommentsVC.set(viewModel: postCommentsViewModel)
+        navigationController?.pushViewController(postCommentsVC, animated: true)
+        
     }
     
 }
@@ -34,6 +49,6 @@ class PostDetailViewController: UIViewController {
 extension PostDetailViewController: PostDetailViewModelDelegate {
     func showDetail(userPost: UserPost) {
         titleLabel.text = userPost.title
-        bodyLabel.text = userPost.body
+        bodyLabel.text = userPost.body?.html2String
     }
 }

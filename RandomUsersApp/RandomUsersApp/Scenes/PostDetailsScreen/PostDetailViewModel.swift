@@ -10,15 +10,16 @@ import Foundation
 protocol PostDetailViewModelProtocol {
     var delegate: PostDetailViewModelDelegate? { get set }
     func load()
+    func postID() -> Int?
 }
 
-protocol PostDetailViewModelDelegate {
+protocol PostDetailViewModelDelegate: AnyObject {
     func showDetail(userPost: UserPost)
 }
 
 final class PostDetailViewModel {
     
-    var delegate: PostDetailViewModelDelegate? //weak var izin vermiyor.
+    weak var delegate: PostDetailViewModelDelegate?
     private var userPost: UserPost
     
     init(userPost: UserPost) {
@@ -31,6 +32,10 @@ extension PostDetailViewModel: PostDetailViewModelProtocol {
     
     func load() {
         delegate?.showDetail(userPost: userPost)
+    }
+    
+    func postID() -> Int? {
+        userPost.id
     }
     
 }
