@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DU9-Wp-ueX">
                         <rect key="frame" x="5" y="5" width="397" height="73"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gw8-fS-d4D">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Gw8-fS-d4D">
                                 <rect key="frame" x="5" y="5" width="387" height="63"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GU8-CS-Y9b">
@@ -35,21 +35,21 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bwm-DC-9Hd">
-                                        <rect key="frame" x="48" y="7.5" width="339" height="48"/>
+                                        <rect key="frame" x="55" y="7.5" width="332" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-EA-DAb">
-                                                <rect key="frame" x="69.5" y="0.0" width="200" height="21.5"/>
+                                                <rect key="frame" x="36" y="0.0" width="260" height="21.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="uD9-qy-l1I"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="uD9-qy-l1I"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebM-Ld-BgU">
-                                                <rect key="frame" x="69.5" y="26.5" width="200" height="21.5"/>
+                                                <rect key="frame" x="36" y="26.5" width="260" height="21.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="JMi-B1-WP9"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="JMi-B1-WP9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,6 +93,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="user" width="50" height="50"/>
+        <image name="user" width="64" height="64"/>
     </resources>
 </document>
