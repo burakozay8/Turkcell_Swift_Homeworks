@@ -18,7 +18,7 @@ class PostCommentCell: UICollectionViewCell {
     
     func configure(postComment: PostComment) {
         emailLabel.text = postComment.email
-        commentLabel.text = postComment.body?.html2String
+        commentLabel.text = (postComment.body?.html2String.capitalizingFirstLetter() ?? "") + "."
     }
 
 }

@@ -48,7 +48,7 @@ class PostDetailViewController: UIViewController {
 
 extension PostDetailViewController: PostDetailViewModelDelegate {
     func showDetail(userPost: UserPost) {
-        titleLabel.text = userPost.title?.uppercased()
-        bodyLabel.text = userPost.body?.html2String
+        titleLabel.text = userPost.title?.capitalizingFirstLetter()
+        bodyLabel.text = (userPost.body?.html2String.capitalizingFirstLetter() ?? "") + "."
     }
 }

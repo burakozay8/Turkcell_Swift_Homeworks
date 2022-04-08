@@ -16,7 +16,7 @@ class UserPostCell: UICollectionViewCell {
     }
     
     func configure(userPost: UserPost) {
-        titleLabel.text = userPost.title
+        titleLabel.text = userPost.title?.capitalizingFirstLetter()
     }
 
 }
