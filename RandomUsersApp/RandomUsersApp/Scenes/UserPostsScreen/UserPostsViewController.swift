@@ -48,22 +48,36 @@ extension UserPostsViewController: UICollectionViewDelegate, UICollectionViewDat
         if let userPost = viewModel?.userPost(at: indexPath.row) {
             cell.configure(userPost: userPost)
         }
+        cell.showMoreButton.tag = indexPath.row
+        cell.showMoreButton.addTarget(self, action: #selector(viewPostDetail), for: .touchUpInside)
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    @objc func viewPostDetail(sender: UIButton) {
+        let indexPath = IndexPath(row: sender.tag, section: 0)
         guard let userPost = viewModel?.userPost(at: indexPath.row) else { return }
         let postDetailViewModel = PostDetailViewModel(userPost: userPost)
-        
+
         styleBackItem()
-        
+
         guard let postDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostDetailViewController") as? PostDetailViewController else { return }
         postDetailVC.set(viewModel: postDetailViewModel)
         navigationController?.pushViewController(postDetailVC, animated: true)
     }
     
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        guard let userPost = viewModel?.userPost(at: indexPath.row) else { return }
+//        let postDetailViewModel = PostDetailViewModel(userPost: userPost)
+//
+//        styleBackItem()
+//
+//        guard let postDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostDetailViewController") as? PostDetailViewController else { return }
+//        postDetailVC.set(viewModel: postDetailViewModel)
+//        navigationController?.pushViewController(postDetailVC, animated: true)
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 60, height: 75)
+        CGSize(width: UIScreen.main.bounds.width - 60, height: 80)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
