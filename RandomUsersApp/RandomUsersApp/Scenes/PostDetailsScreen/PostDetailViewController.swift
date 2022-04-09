@@ -7,11 +7,11 @@
 
 import UIKit
 
-class PostDetailViewController: UIViewController {
+final class PostDetailViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bodyLabel: UILabel!
-    @IBOutlet weak var readCommentsButton: UIButton!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var bodyLabel: UILabel!
+    @IBOutlet private weak var readCommentsButton: UIButton!
     
     private var viewModel: PostDetailViewModelProtocol?
     

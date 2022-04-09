@@ -9,8 +9,8 @@ import UIKit
 
 class PostCommentCell: UICollectionViewCell {
     
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
+    @IBOutlet private weak var commentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

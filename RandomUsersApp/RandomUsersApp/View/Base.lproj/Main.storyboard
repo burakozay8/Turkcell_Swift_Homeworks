@@ -95,13 +95,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaanne Graham's Posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4x-10-f9Z">
-                                <rect key="frame" x="20" y="54" width="374" height="23"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <rect key="frame" x="20" y="44" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0u3-Zp-S9U">
-                                <rect key="frame" x="0.0" y="87" width="414" height="775"/>
+                                <rect key="frame" x="0.0" y="75.5" width="414" height="786.5"/>
                                 <color key="backgroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ynd-Yq-WdX">
                                     <size key="itemSize" width="128" height="128"/>
@@ -131,7 +131,7 @@
                             <constraint firstItem="rsB-sl-mCK" firstAttribute="trailing" secondItem="A4x-10-f9Z" secondAttribute="trailing" constant="20" id="1Tg-g4-mN1"/>
                             <constraint firstItem="0u3-Zp-S9U" firstAttribute="top" secondItem="A4x-10-f9Z" secondAttribute="bottom" constant="10" id="5uV-Lf-ZnV"/>
                             <constraint firstItem="0u3-Zp-S9U" firstAttribute="trailing" secondItem="rsB-sl-mCK" secondAttribute="trailing" id="7w8-Sp-pYC"/>
-                            <constraint firstItem="A4x-10-f9Z" firstAttribute="top" secondItem="rsB-sl-mCK" secondAttribute="top" constant="10" id="Bb9-HZ-YBj"/>
+                            <constraint firstItem="A4x-10-f9Z" firstAttribute="top" secondItem="rsB-sl-mCK" secondAttribute="top" id="Bb9-HZ-YBj"/>
                             <constraint firstItem="rsB-sl-mCK" firstAttribute="bottom" secondItem="0u3-Zp-S9U" secondAttribute="bottom" id="Uh0-Cd-Th8"/>
                             <constraint firstItem="A4x-10-f9Z" firstAttribute="leading" secondItem="rsB-sl-mCK" secondAttribute="leading" constant="20" id="sBY-TE-Sht"/>
                             <constraint firstItem="0u3-Zp-S9U" firstAttribute="leading" secondItem="rsB-sl-mCK" secondAttribute="leading" id="wOG-MX-RiA"/>
@@ -272,7 +272,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r6n-Zl-qqP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="78" width="414" height="784"/>
                                 <color key="backgroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hMo-CW-yeg">
                                     <size key="itemSize" width="128" height="128"/>
@@ -295,10 +295,10 @@
                                     <outlet property="delegate" destination="Ea7-LC-2aV" id="cQH-5T-ZxO"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-YH-9t3">
-                                <rect key="frame" x="20" y="54" width="374" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zJ-4n-TL9">
+                                <rect key="frame" x="20" y="44" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.17660507559999999" green="0.24987280370000001" blue="0.45323020219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -306,12 +306,12 @@
                         <color key="backgroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r6n-Zl-qqP" firstAttribute="trailing" secondItem="QUn-xs-YYp" secondAttribute="trailing" id="2zr-a5-ape"/>
-                            <constraint firstItem="r6n-Zl-qqP" firstAttribute="top" secondItem="bgP-YH-9t3" secondAttribute="bottom" constant="10" id="5Zs-B7-vzM"/>
-                            <constraint firstItem="bgP-YH-9t3" firstAttribute="top" secondItem="QUn-xs-YYp" secondAttribute="top" constant="10" id="PHA-Cd-i6O"/>
-                            <constraint firstItem="QUn-xs-YYp" firstAttribute="trailing" secondItem="bgP-YH-9t3" secondAttribute="trailing" constant="20" id="XCx-TY-gHG"/>
+                            <constraint firstItem="5zJ-4n-TL9" firstAttribute="top" secondItem="QUn-xs-YYp" secondAttribute="top" id="Da5-xe-9Wd"/>
+                            <constraint firstItem="r6n-Zl-qqP" firstAttribute="top" secondItem="5zJ-4n-TL9" secondAttribute="bottom" constant="10" id="KzA-qa-Mbq"/>
+                            <constraint firstItem="5zJ-4n-TL9" firstAttribute="leading" secondItem="QUn-xs-YYp" secondAttribute="leading" constant="20" id="Qpx-vZ-ipi"/>
+                            <constraint firstItem="QUn-xs-YYp" firstAttribute="trailing" secondItem="5zJ-4n-TL9" secondAttribute="trailing" constant="20" id="WVC-HI-rNJ"/>
                             <constraint firstItem="r6n-Zl-qqP" firstAttribute="leading" secondItem="QUn-xs-YYp" secondAttribute="leading" id="hHm-dd-ETx"/>
                             <constraint firstItem="QUn-xs-YYp" firstAttribute="bottom" secondItem="r6n-Zl-qqP" secondAttribute="bottom" id="i4M-Wx-60X"/>
-                            <constraint firstItem="bgP-YH-9t3" firstAttribute="leading" secondItem="QUn-xs-YYp" secondAttribute="leading" constant="20" id="lTZ-Ym-6hv"/>
                         </constraints>
                     </view>
                     <connections>

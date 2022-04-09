@@ -9,9 +9,9 @@ import UIKit
 
 class UserCell: UICollectionViewCell {
 
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

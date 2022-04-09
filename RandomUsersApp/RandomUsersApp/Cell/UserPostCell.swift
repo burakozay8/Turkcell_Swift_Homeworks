@@ -9,7 +9,7 @@ import UIKit
 
 class UserPostCell: UICollectionViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet weak var showMoreButton: UIButton!
     
     override func awakeFromNib() {

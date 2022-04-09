@@ -7,10 +7,10 @@
 
 import UIKit
 
-class UserPostsViewController: UIViewController, LoadingShowable {
+final class UserPostsViewController: UIViewController, LoadingShowable {
     
     @IBOutlet weak var userPostsCollectionView: UICollectionView!
-    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet private weak var headerLabel: UILabel!
     
     private var viewModel: UserPostsViewModelProtocol?
 
@@ -77,7 +77,7 @@ extension UserPostsViewController: UICollectionViewDelegate, UICollectionViewDat
 //    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 60, height: 80)
+        CGSize(width: UIScreen.main.bounds.width - 55, height: 75)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

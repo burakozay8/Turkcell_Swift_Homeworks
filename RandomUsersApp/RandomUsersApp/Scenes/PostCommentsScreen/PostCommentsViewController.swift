@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostCommentsViewController: UIViewController, LoadingShowable {
+final class PostCommentsViewController: UIViewController, LoadingShowable {
 
     @IBOutlet weak var postCommentsCollectionView: UICollectionView!
     private var viewModel: PostCommentsViewModelProtocol?
