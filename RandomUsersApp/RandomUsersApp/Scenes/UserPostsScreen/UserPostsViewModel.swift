@@ -20,7 +20,6 @@ protocol UserPostsViewModelDelegate: AnyObject {
     func hideLoadingView()
     func reloadData()
     func showUserName(userName: String?)
-    
 }
 
 final class UserPostsViewModel {

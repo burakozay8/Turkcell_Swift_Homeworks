@@ -30,6 +30,7 @@ final class PostCommentsViewController: UIViewController, LoadingShowable {
 }
 
 extension PostCommentsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.numberOfItems ?? 0
     }
@@ -43,7 +44,7 @@ extension PostCommentsViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 30, height: 150)
+        CGSize(width: UIScreen.main.bounds.width - 20, height: 155)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

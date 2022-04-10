@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezt-Kx-gCe">
                         <rect key="frame" x="2" y="2" width="579" height="141"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-zL-mgX">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-zL-mgX">
                                 <rect key="frame" x="3" y="3" width="573" height="135"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hil-CG-RRZ">
@@ -35,16 +35,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ISP-P5-259">
-                                        <rect key="frame" x="68" y="25.5" width="505" height="84.5"/>
+                                        <rect key="frame" x="58" y="25.5" width="515" height="84.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYr-Ld-BUw">
-                                                <rect key="frame" x="0.0" y="0.0" width="505" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="515" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <color key="textColor" red="0.452675879" green="0.4177849293" blue="0.95481663939999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1O-uP-j8w">
-                                                <rect key="frame" x="0.0" y="30.5" width="505" height="54"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="515" height="54"/>
                                                 <string key="text">doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

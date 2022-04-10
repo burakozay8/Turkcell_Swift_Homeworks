@@ -34,7 +34,7 @@ final class PostCommentsViewModel {
 
     fileprivate func fetchUserComments() {
         delegate?.showLoadingView()
-        service?.getUserComments(postID: postID, completion: { [weak self] result in
+        service?.getUserComments(postID: postID) { [weak self] result in
             guard let self = self else { return }
             self.delegate?.hideLoadingView()
             switch result {
@@ -44,7 +44,7 @@ final class PostCommentsViewModel {
             case .failure(let errror):
                 print(errror.localizedDescription)
             }
-        })
+        }
     }
     
 }

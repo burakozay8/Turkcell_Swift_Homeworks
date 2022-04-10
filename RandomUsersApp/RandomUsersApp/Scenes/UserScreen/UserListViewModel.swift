@@ -31,7 +31,6 @@ final class UserListViewModel {
     }
     
     fileprivate func fetchUsers() {
-        
         delegate?.showLoadingView()
         service?.getUserList { [weak self] result in
             guard let self = self else { return }
@@ -44,7 +43,6 @@ final class UserListViewModel {
                 print(error.localizedDescription)
             }
         }
-        
     }
     
 }

@@ -160,7 +160,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="GwH-n0-HS5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -170,13 +170,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFF-oC-ffX">
-                                <rect key="frame" x="25" y="464" width="364" height="40"/>
+                                <rect key="frame" x="25" y="479" width="364" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fph-bq-aIl"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Read Comments">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
                                     <color key="baseForegroundColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="baseBackgroundColor" red="0.17660507559999999" green="0.24987280370000001" blue="0.45323020219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
@@ -190,15 +190,15 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8R-6z-3oz">
-                                <rect key="frame" x="15" y="169" width="384" height="235"/>
+                                <rect key="frame" x="15" y="169" width="384" height="250"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0TM-vU-gna">
-                                        <rect key="frame" x="10" y="10" width="364" height="220"/>
+                                        <rect key="frame" x="10" y="10" width="364" height="235"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunt aut facere repellat provident occaecati excepturi optio reprehenderit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-o6-eFs">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="124.5"/>
                                                 <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                 <color key="textColor" red="0.452675879" green="0.4177849293" blue="0.95481663939999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -208,10 +208,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-n3-Mvu">
-                                                <rect key="frame" x="0.0" y="116" width="364" height="104"/>
+                                                <rect key="frame" x="0.0" y="124.5" width="364" height="110.5"/>
                                                 <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <string key="text">quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0090551963080000002" green="0.096408642830000002" blue="0.34328383210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -229,7 +229,7 @@
                                     <constraint firstAttribute="trailing" secondItem="0TM-vU-gna" secondAttribute="trailing" constant="10" id="6cW-TN-J3g"/>
                                     <constraint firstItem="0TM-vU-gna" firstAttribute="top" secondItem="g8R-6z-3oz" secondAttribute="top" constant="10" id="Yff-BF-BRX"/>
                                     <constraint firstItem="0TM-vU-gna" firstAttribute="leading" secondItem="g8R-6z-3oz" secondAttribute="leading" constant="10" id="kyY-Xj-TQT"/>
-                                    <constraint firstAttribute="height" constant="235" id="q3N-Z2-6CE"/>
+                                    <constraint firstAttribute="height" constant="250" id="q3N-Z2-6CE"/>
                                     <constraint firstAttribute="bottom" secondItem="0TM-vU-gna" secondAttribute="bottom" constant="5" id="xiP-Bd-UdQ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

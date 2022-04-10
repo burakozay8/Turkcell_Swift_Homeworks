@@ -32,7 +32,6 @@ final class PostDetailViewController: UIViewController {
     }
     
     @IBAction func readCommentsButtonAction(_ sender: Any) {
-        
         guard let postID = viewModel?.postID() else { return }
         let postCommentsViewModel = PostCommentsViewModel(postID: postID)
         
@@ -41,14 +40,15 @@ final class PostDetailViewController: UIViewController {
         guard let postCommentsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostCommentsViewController") as? PostCommentsViewController else { return }
         postCommentsVC.set(viewModel: postCommentsViewModel)
         navigationController?.pushViewController(postCommentsVC, animated: true)
-        
     }
     
 }
 
 extension PostDetailViewController: PostDetailViewModelDelegate {
+    
     func showDetail(userPost: UserPost) {
         titleLabel.text = userPost.title?.capitalizingFirstLetter()
         bodyLabel.text = (userPost.body?.html2String.capitalizingFirstLetter() ?? "") + "."
     }
+    
 }

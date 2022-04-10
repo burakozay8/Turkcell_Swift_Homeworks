@@ -53,7 +53,7 @@ extension UserPostsViewController: UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     
-    @objc func viewPostDetail(sender: UIButton) {
+    @objc private func viewPostDetail(sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
         guard let userPost = viewModel?.userPost(at: indexPath.row) else { return }
         let postDetailViewModel = PostDetailViewModel(userPost: userPost)
@@ -65,19 +65,8 @@ extension UserPostsViewController: UICollectionViewDelegate, UICollectionViewDat
         navigationController?.pushViewController(postDetailVC, animated: true)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard let userPost = viewModel?.userPost(at: indexPath.row) else { return }
-//        let postDetailViewModel = PostDetailViewModel(userPost: userPost)
-//
-//        styleBackItem()
-//
-//        guard let postDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostDetailViewController") as? PostDetailViewController else { return }
-//        postDetailVC.set(viewModel: postDetailViewModel)
-//        navigationController?.pushViewController(postDetailVC, animated: true)
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 55, height: 75)
+        CGSize(width: UIScreen.main.bounds.width - 50, height: 75)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
