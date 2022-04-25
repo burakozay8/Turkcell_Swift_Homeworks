@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UpcomingMoviesCell" customModule="MoviesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="126"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="403" height="126"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyd-AX-hp5">
+                        <rect key="frame" x="0.0" y="0.0" width="403" height="126"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k7J-cP-KHY">
+                                <rect key="frame" x="8" y="8" width="387" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="p2X-xF-TtC">
+                                        <rect key="frame" x="0.0" y="10" width="80" height="90"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-8T-mCc">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="Nft-ry-LDu"/>
+                                                    <constraint firstAttribute="width" constant="80" id="ziA-Mj-VC2"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-f8-fez">
+                                        <rect key="frame" x="90" y="11.5" width="297" height="87"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marriage Story(2019)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFS-iD-Z5j">
+                                                <rect key="frame" x="0.0" y="0.0" width="297" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cJ-wv-jHH">
+                                                <rect key="frame" x="0.0" y="26.5" width="297" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01.01.2022" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZR-K6-vX9">
+                                                <rect key="frame" x="0.0" y="70" width="297" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k7J-cP-KHY" firstAttribute="leading" secondItem="hyd-AX-hp5" secondAttribute="leading" constant="8" id="ABX-Xf-rDw"/>
+                            <constraint firstItem="k7J-cP-KHY" firstAttribute="top" secondItem="hyd-AX-hp5" secondAttribute="top" constant="8" id="Tos-Uq-qeF"/>
+                            <constraint firstAttribute="trailing" secondItem="k7J-cP-KHY" secondAttribute="trailing" constant="8" id="g3f-dJ-bVl"/>
+                            <constraint firstAttribute="bottom" secondItem="k7J-cP-KHY" secondAttribute="bottom" constant="8" id="ydz-lv-d5T"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="hyd-AX-hp5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H1a-E5-bhd"/>
+                <constraint firstAttribute="trailing" secondItem="hyd-AX-hp5" secondAttribute="trailing" id="kue-xM-pHK"/>
+                <constraint firstAttribute="bottom" secondItem="hyd-AX-hp5" secondAttribute="bottom" id="nqO-x6-xKQ"/>
+                <constraint firstItem="hyd-AX-hp5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="um7-9b-eqb"/>
+            </constraints>
+            <size key="customSize" width="403" height="126"/>
+            <connections>
+                <outlet property="movieImageView" destination="lGk-8T-mCc" id="Lq9-ty-Wxu"/>
+                <outlet property="movieOverviewLabel" destination="3cJ-wv-jHH" id="2Pb-Vt-rFj"/>
+                <outlet property="movieReleaseDateLabel" destination="cZR-K6-vX9" id="etQ-3f-pWA"/>
+                <outlet property="movieTitleLabel" destination="SFS-iD-Z5j" id="fsj-91-qZj"/>
+            </connections>
+            <point key="canvasLocation" x="125.36231884057972" y="96.428571428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="kingfisher-1.jpg" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
