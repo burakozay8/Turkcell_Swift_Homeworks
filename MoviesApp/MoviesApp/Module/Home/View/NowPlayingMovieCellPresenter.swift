@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NowPlayingMovieCellPresenterProtocol: AnyObject {
+protocol NowPlayingMovieCellPresenterProtocol {
     func load()
 }
 

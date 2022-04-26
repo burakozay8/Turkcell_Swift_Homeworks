@@ -11,24 +11,33 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NowPlayingMovieCell" customModule="MoviesApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="147"/>
+            <rect key="frame" x="0.0" y="0.0" width="415" height="189"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="343" height="147"/>
+                <rect key="frame" x="0.0" y="0.0" width="415" height="189"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbp-tm-ofR">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="147"/>
+                        <rect key="frame" x="0.0" y="0.0" width="415" height="189"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hWD-Qm-mvh">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="147"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hWD-Qm-mvh">
+                                <rect key="frame" x="0.0" y="0.0" width="415" height="189"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qHs-ty-OSI">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="120.5"/>
+                                        <rect key="frame" x="15" y="0.0" width="385" height="164.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="385" id="029-lA-rF6"/>
+                                            <constraint firstAttribute="height" priority="999" constant="180" id="k3f-M0-s3c"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marriage Story(2019)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-2X-Ub6">
-                                        <rect key="frame" x="0.0" y="125.5" width="186.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <rect key="frame" x="119.5" y="168.5" width="176.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -52,12 +61,12 @@
                 <constraint firstAttribute="trailing" secondItem="vbp-tm-ofR" secondAttribute="trailing" id="m51-rU-eZd"/>
                 <constraint firstAttribute="bottom" secondItem="vbp-tm-ofR" secondAttribute="bottom" id="yiW-yR-uWw"/>
             </constraints>
-            <size key="customSize" width="343" height="147"/>
+            <size key="customSize" width="415" height="189"/>
             <connections>
                 <outlet property="movieImageView" destination="qHs-ty-OSI" id="orW-oI-LLB"/>
                 <outlet property="movieTitleLabel" destination="V8h-2X-Ub6" id="ggI-lt-mPE"/>
             </connections>
-            <point key="canvasLocation" x="350" y="153.01339285714286"/>
+            <point key="canvasLocation" x="476.08695652173918" y="174.44196428571428"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -9,14 +9,17 @@ import Foundation
 
 protocol DetailInteractorProtocol: AnyObject {
     func fetchMovieDetail(with movieID: Int)
+    func fetchSimilarMovies(with movieID: Int)
     // func refreshMovieDetail...??
 }
 
 protocol DetailInteractorOutputProtocol: AnyObject {
     func fetchMovieDetailOutput(result: MovieDetailResult)
+    func fetchSimilarMovies(result: MoviesResult)
 }
 
 typealias MovieDetailResult = Result<MovieDetailResponse, Error>
+typealias SimilarMoviesResult = Result<SimilarMoviesResponse, Error>
 fileprivate var moviesService: MoviesServiceProtocol = MoviesService()
 
 final class DetailInteractor {
@@ -29,6 +32,13 @@ extension DetailInteractor: DetailInteractorProtocol {
         moviesService.getMovieDetail(movieID: movieID) { [weak self] result in
             guard let self = self else { return }
             self.output?.fetchMovieDetailOutput(result: result)
+        }
+    }
+    
+    func fetchSimilarMovies(with movieID: Int) {
+        moviesService.getSimilarMovies(movieID: movieID) { [weak self] result in
+            guard let self = self else { return }
+            self.output?.fetchSimilarMovies(result: result)
         }
     }
     

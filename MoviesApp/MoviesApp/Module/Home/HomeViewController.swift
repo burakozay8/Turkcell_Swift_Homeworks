@@ -14,6 +14,7 @@ protocol HomeViewControllerProtocol: AnyObject {
     func hideLoadingView()
     func setupCollectionViews()
 //    var currentPage: Int { get set }
+    //TODO: SearchBar?!
 }
 
 final class HomeViewController: UIViewController, LoadingShowable {
@@ -115,9 +116,9 @@ extension HomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == topCollectionView {
-            presenter?.didSelectRowAtForTopCollectionView(index: indexPath.row)
+            presenter?.didSelectItemAtForNowPlayingMovies(index: indexPath.row)
         } else {
-            presenter?.didSelectRowAtForBottomCollectionView(index: indexPath.row)
+            presenter?.didSelectItemAtForUpcomingMovies(index: indexPath.row)
         }
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

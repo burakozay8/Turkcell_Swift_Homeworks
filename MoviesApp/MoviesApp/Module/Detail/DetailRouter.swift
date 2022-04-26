@@ -12,7 +12,7 @@ protocol DetailRouterProtocol: AnyObject {
 }
 
 enum DetailRoutes {
-    case detail(movieDetail: MovieDetailResponse)
+    case detail(similarMovie: MovieResult)
 }
 
 final class DetailRouter {
@@ -36,9 +36,9 @@ extension DetailRouter: DetailRouterProtocol {
     
     func navigate(_ route: DetailRoutes) {
         switch route {
-        case .detail(movieDetail: let movieDetail):
+        case .detail(similarMovie: let similarMovie):
             let detailVC = DetailRouter.createModule()
-            detailVC.movieDetail = movieDetail //id yi dönmek için olabilir ama saçma.
+            detailVC.movie = similarMovie
             viewController?.navigationController?.pushViewController(detailVC, animated: true)
         }
     }

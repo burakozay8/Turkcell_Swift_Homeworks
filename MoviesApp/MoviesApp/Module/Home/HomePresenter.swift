@@ -13,8 +13,8 @@ protocol HomePresenterProtocol {
     var numberOfItemsForUpcomingMovies: Int { get }
     func nowPlayingMovie(_ index: Int) -> MovieResult?
     func upcomingMovie(_ index: Int) -> MovieResult?
-    func didSelectRowAtForTopCollectionView(index: Int)
-    func didSelectRowAtForBottomCollectionView(index: Int)
+    func didSelectItemAtForNowPlayingMovies(index: Int)
+    func didSelectItemAtForUpcomingMovies(index: Int)
 //    var currentPage: Int { get }
 }
 
@@ -26,6 +26,7 @@ final class HomePresenter {
     
     private var nowPlayingMovies: [MovieResult] = []
     private var upcomingMovies: [MovieResult] = []
+    private var moviesSearch: [MovieResult] = [] //boyle mi olmalı??
     
     init(view: HomeViewControllerProtocol?, interactor: HomeInteractorProtocol?, router: HomeRouterProtocol?) {
         self.view = view
@@ -43,6 +44,11 @@ final class HomePresenter {
         interactor?.fetchUpcomingMovies()
     }
     
+    fileprivate func fetchSearchMovie(with query: String) { //BIR YERDE CAGIR!
+        view?.showLoadingView()
+        interactor?.fetchSearchMovie(with: query)
+    }
+    
 }
 
 extension HomePresenter: HomePresenterProtocol {
@@ -51,7 +57,6 @@ extension HomePresenter: HomePresenterProtocol {
         view?.setupCollectionViews()
         fetchNowPlayingMovies()
         fetchUpcomingMovies()
-        fetchSearch()
     }
     
     var numberOfItemsForNowPlayingMovies: Int {
@@ -70,12 +75,12 @@ extension HomePresenter: HomePresenterProtocol {
         upcomingMovies[safe: index]
     }
     
-    func didSelectRowAtForTopCollectionView(index: Int) {
+    func didSelectItemAtForNowPlayingMovies(index: Int) {
         guard let nowPlayingMovie = nowPlayingMovie(index) else { return }
         router?.navigate(.detail(movie: nowPlayingMovie))
     }
     
-    func didSelectRowAtForBottomCollectionView(index: Int) {
+    func didSelectItemAtForUpcomingMovies(index: Int) {
         guard let upcomingMovie = upcomingMovie(index) else { return }
         router?.navigate(.detail(movie: upcomingMovie))
     }
@@ -87,13 +92,13 @@ extension HomePresenter: HomePresenterProtocol {
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
-    
+
     func fetchNowPlayingMoviesOutput(result: MoviesResult) {
         view?.hideLoadingView()
         switch result {
         case .success(let moviesResult):
             nowPlayingMovies = moviesResult.results ?? []
-            view?.reloadDataForTopCollectionView() //
+            view?.reloadDataForTopCollectionView()
         case .failure(let error):
             print(error) // alert göster.
         }
@@ -104,14 +109,21 @@ extension HomePresenter: HomeInteractorOutputProtocol {
         switch result {
         case .success(let moviesResult):
             upcomingMovies = moviesResult.results ?? []
-            view?.reloadDataForBottomCollectionView() //
+            view?.reloadDataForBottomCollectionView()
         case .failure(let error):
             print(error)
         }
     }
     
-    func fetchSearch() {
-        interactor?.fetchSearch()
+    func fetchSearchMovieOutput(result: MoviesResult) {
+        view?.hideLoadingView()
+        switch result {
+        case .success(let moviesResult):
+            moviesSearch = moviesResult.results ?? []
+            //reloadData()
+        case .failure(let error):
+            print(error)
+        }
     }
     
 }

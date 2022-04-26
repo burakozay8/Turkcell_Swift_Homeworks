@@ -16,7 +16,7 @@ enum Router: URLRequestConvertible {
     case upcoming
     case search(query: String?)
     case detail(movieID: Int?)
-    //digerleri??
+    case similar(movieID: Int?)
     
     var baseURL: URL {
         return URL(string: "https://api.themoviedb.org/3")!
@@ -24,7 +24,7 @@ enum Router: URLRequestConvertible {
     
     var method: HTTPMethod {
         switch self {
-        case .nowPlaying, .upcoming, .search, .detail:
+        case .nowPlaying, .upcoming, .search, .detail, .similar:
             return .get
         }
     }
@@ -38,9 +38,11 @@ enum Router: URLRequestConvertible {
             return nil //?
         case .search(query: let query):
         if let query = query {
-            params["query"] = query //????
+            params["query"] = query
             }
         case .detail:
+            return nil
+        case.similar:
             return nil
         }
         return params
@@ -59,8 +61,11 @@ enum Router: URLRequestConvertible {
         case.search:
             return "/search/movie"
         case .detail(movieID: let movieID):
-            guard let movieID = movieID else { return ""}
+            guard let movieID = movieID else { return "" }
             return "/movie/\(String(describing: movieID))"
+        case.similar(movieID: let movieID):
+            guard let movieID = movieID else { return "" }
+            return "/movie/\(String(describing: movieID))/similar"
         }
     }
     
