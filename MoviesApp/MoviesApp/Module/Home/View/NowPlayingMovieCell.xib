@@ -20,11 +20,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbp-tm-ofR">
                         <rect key="frame" x="0.0" y="0.0" width="415" height="189"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hWD-Qm-mvh">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="hWD-Qm-mvh">
                                 <rect key="frame" x="0.0" y="0.0" width="415" height="189"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qHs-ty-OSI">
-                                        <rect key="frame" x="15" y="0.0" width="385" height="164.5"/>
+                                        <rect key="frame" x="15" y="0.0" width="385" height="162.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="385" id="029-lA-rF6"/>
                                             <constraint firstAttribute="height" priority="999" constant="180" id="k3f-M0-s3c"/>
@@ -38,13 +38,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marriage Story(2019)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-2X-Ub6">
                                         <rect key="frame" x="119.5" y="168.5" width="176.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hWD-Qm-mvh" secondAttribute="trailing" id="0I9-8f-6VR"/>
                             <constraint firstAttribute="bottom" secondItem="hWD-Qm-mvh" secondAttribute="bottom" id="3H3-fs-9H2"/>
@@ -55,6 +55,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
             <constraints>
                 <constraint firstItem="vbp-tm-ofR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="B7p-Bc-SjN"/>
                 <constraint firstItem="vbp-tm-ofR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="R5B-1s-AhQ"/>
@@ -64,14 +65,14 @@
             <size key="customSize" width="415" height="189"/>
             <connections>
                 <outlet property="movieImageView" destination="qHs-ty-OSI" id="orW-oI-LLB"/>
-                <outlet property="movieTitleLabel" destination="V8h-2X-Ub6" id="ggI-lt-mPE"/>
+                <outlet property="movieTitleLabel" destination="V8h-2X-Ub6" id="rFt-07-dYn"/>
             </connections>
             <point key="canvasLocation" x="476.08695652173918" y="174.44196428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

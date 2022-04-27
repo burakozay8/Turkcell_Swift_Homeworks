@@ -10,14 +10,14 @@ import Foundation
 protocol HomeInteractorProtocol: AnyObject {
     func fetchNowPlayingMovies()
     func fetchUpcomingMovies()
-    func fetchSearchMovie(with query: String)
+//    func fetchSearchMovie(with query: String)
     //search, refresh...?
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {
     func fetchNowPlayingMoviesOutput(result: MoviesResult)
     func fetchUpcomingMoviesOutput(result: MoviesResult)
-    func fetchSearchMovieOutput(result: MoviesResult)
+//    func fetchSearchMovieOutput(result: MoviesResult)
 }
 
 typealias MoviesResult = Result<MoviesResponse, Error>
@@ -43,11 +43,11 @@ extension HomeInteractor: HomeInteractorProtocol {
         }
     }
     
-    func fetchSearchMovie(with query: String) {
-        moviesService.getSearchMovie(query: query) { [weak self] result in
-            guard let self = self else { return }
-            self.output?.fetchSearchMovieOutput(result: result)
-        }
-    }
+//    func fetchSearchMovie(with query: String) {
+//        moviesService.getSearchMovie(query: query) { [weak self] result in
+//            guard let self = self else { return }
+//            self.output?.fetchSearchMovieOutput(result: result)
+//        }
+//    }
     
 }

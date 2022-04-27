@@ -11,11 +11,13 @@ import Kingfisher
 protocol DetailViewControllerProtocol: AnyObject {
     func showLoadingView()
     func hideLoadingView()
-    func getMovie() -> MovieResult?
-    func reloadData()
     func setupCollectionView()
+    func reloadData()
+    func getMovie() -> MovieResult?
+    func showMovieDetail(_ movieDetail: MovieDetailResponse?)
     func setfavButtonImage(_ systemName: String, isAdded: Bool)
-//    func showMovieDetail(_ movieDetail: MovieDetailResponse?)
+    func addFavoritesButtonTapped(id: Int)
+    
 }
 
 final class DetailViewController: UIViewController, LoadingShowable {
@@ -28,7 +30,6 @@ final class DetailViewController: UIViewController, LoadingShowable {
     @IBOutlet weak var movieReleaseDateLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     var presenter: DetailPresenterProtocol?
     
     var movie: MovieResult?
@@ -37,17 +38,15 @@ final class DetailViewController: UIViewController, LoadingShowable {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        showMovieDetail()
-
     }
     
-    private func showMovieDetail() { // dogru mu??
-        prepareImage(with: movie?.backdropPath ?? "")
-        movieTitleLabel.text = movie?.title
-        movieOverviewLabel.text = movie?.overview
-        guard let voteAverage = movie?.voteAverage else { return }
-        movieRatingLabel.text = "\(String(describing: voteAverage))"
-        movieReleaseDateLabel.text = movie?.releaseDate
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.loadDetail()
     }
     
     private func prepareImage(with urlString: String) {
@@ -75,39 +74,37 @@ extension DetailViewController: DetailViewControllerProtocol {
         hideLoading()
     }
     
-    func getMovie() -> MovieResult? {
-        return movie
-    }
-    
-    func reloadData() {
-        collectionView.reloadData()
-    }
-    
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: SimilarMovieCell.self)
     }
     
+    func reloadData() {
+        collectionView.reloadData()
+    }
+    
+    func getMovie() -> MovieResult? {
+        return movie
+    }
+    
+    func showMovieDetail(_ movieDetail: MovieDetailResponse?) {
+            self.prepareImage(with: movieDetail?.backdropPath ?? "")
+            self.movieTitleLabel.text = movieDetail?.title
+            self.movieOverviewLabel.text = movieDetail?.overview
+            guard let voteAverage = movieDetail?.voteAverage else { return }
+            self.movieRatingLabel.text = "\(String(describing: voteAverage))"
+            self.movieReleaseDateLabel.text = movieDetail?.releaseDate
+    }
+    
     func setfavButtonImage(_ systemName: String, isAdded: Bool) {
         favButton.setImage(UIImage(systemName: systemName), for: UIControl.State.normal)
     }
     
-//    func showMovieDetail(_ movieDetail: MovieDetailResponse?) {
-//        prepareImage(with: movieDetail?.backdropPath ?? "")
-//        movieTitleLabel.text = movieDetail?.title
-//        movieOverviewLabel.text = movieDetail?.overview
-//        guard let voteAverage = movieDetail?.voteAverage else { return }
-//        movieRatingLabel.text = "\(String(describing: voteAverage))"
-//        movieReleaseDateLabel.text = movieDetail?.releaseDate
-//    }
-    
-}
-
-extension DetailViewController: DetailPresenterDelegate {
     func addFavoritesButtonTapped(id: Int) {
         presenter?.addFavoritesMovie(id: id)
     }
+    
 }
 
 extension DetailViewController: UICollectionViewDelegate {

@@ -16,7 +16,7 @@ protocol NowPlayingMovieCellProtocol: AnyObject {
 final class NowPlayingMovieCell: UICollectionViewCell {
 
     @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet var movieTitleLabel: UILabel!
     
     var cellPresenter: NowPlayingMovieCellPresenterProtocol? {
         didSet {
@@ -53,7 +53,12 @@ extension NowPlayingMovieCell: NowPlayingMovieCellProtocol {
     }
     
     func setTitleLabel(_ text: String) {
-        movieTitleLabel.text = text
+//         let movieTitleLabel = UILabel(frame: CGRect(x: 10, y: 200, width: movieImageView.frame.width - 10, height: 30))
+         movieTitleLabel.text = text
+//         movieTitleLabel.textColor = UIColor.white
+//         movieTitleLabel.font = UIFont(name:"chalkboard SE", size: 18)
+//         movieImageView.addSubview(movieTitleLabel)
+        
     }
     
 }

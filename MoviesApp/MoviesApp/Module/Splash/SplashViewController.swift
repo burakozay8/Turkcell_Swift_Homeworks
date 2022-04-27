@@ -13,7 +13,7 @@ protocol SplashViewControllerProtocol: AnyObject {
 
 final class SplashViewController: BaseViewController {
 
-    var presenter: SplashPresenterProtocol? //?
+    var presenter: SplashPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,7 @@ final class SplashViewController: BaseViewController {
 extension SplashViewController: SplashViewControllerProtocol {
     
     func noInternetConnection() {
-        showAlertForInternetConnection(title: "Network anomaly, please try again later.", message: nil)
-        //ERROR: whose view is not in the window hierarchy.//
+        showAlertForInternetConnection(title: "Network anomaly", message: "Please check your internet connection.")
     }
     
 }

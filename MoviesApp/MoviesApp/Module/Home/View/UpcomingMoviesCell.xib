@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,12 +23,12 @@
                                 <rect key="frame" x="8" y="8" width="387" height="110"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="p2X-xF-TtC">
-                                        <rect key="frame" x="0.0" y="12.5" width="80" height="85"/>
+                                        <rect key="frame" x="0.0" y="10" width="80" height="90"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-8T-mCc">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="85"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-8T-mCc">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="85" id="Nft-ry-LDu"/>
+                                                    <constraint firstAttribute="height" constant="90" id="Nft-ry-LDu"/>
                                                     <constraint firstAttribute="width" constant="80" id="ziA-Mj-VC2"/>
                                                 </constraints>
                                             </imageView>
@@ -40,25 +39,25 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-f8-fez">
-                                        <rect key="frame" x="90" y="14" width="297" height="82.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-f8-fez">
+                                        <rect key="frame" x="90" y="11" width="297" height="88.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marriage Story(2019)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFS-iD-Z5j">
                                                 <rect key="frame" x="0.0" y="0.0" width="297" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cJ-wv-jHH">
-                                                <rect key="frame" x="0.0" y="25.5" width="297" height="36"/>
+                                                <rect key="frame" x="0.0" y="28.5" width="297" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01.01.2022" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZR-K6-vX9">
-                                                <rect key="frame" x="0.0" y="66.5" width="297" height="16"/>
+                                                <rect key="frame" x="0.0" y="72.5" width="297" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -66,17 +65,23 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1097869948" green="0.1098136529" blue="0.1097853258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="k7J-cP-KHY" firstAttribute="leading" secondItem="hyd-AX-hp5" secondAttribute="leading" constant="8" id="ABX-Xf-rDw"/>
                             <constraint firstItem="k7J-cP-KHY" firstAttribute="top" secondItem="hyd-AX-hp5" secondAttribute="top" constant="8" id="Tos-Uq-qeF"/>
                             <constraint firstAttribute="trailing" secondItem="k7J-cP-KHY" secondAttribute="trailing" constant="8" id="g3f-dJ-bVl"/>
                             <constraint firstAttribute="bottom" secondItem="k7J-cP-KHY" secondAttribute="bottom" constant="8" id="ydz-lv-d5T"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.1097869948" green="0.1098136529" blue="0.1097853258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hyd-AX-hp5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H1a-E5-bhd"/>
                 <constraint firstAttribute="trailing" secondItem="hyd-AX-hp5" secondAttribute="trailing" id="kue-xM-pHK"/>
@@ -84,6 +89,11 @@
                 <constraint firstItem="hyd-AX-hp5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="um7-9b-eqb"/>
             </constraints>
             <size key="customSize" width="403" height="126"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="movieImageView" destination="lGk-8T-mCc" id="Lq9-ty-Wxu"/>
                 <outlet property="movieOverviewLabel" destination="3cJ-wv-jHH" id="2Pb-Vt-rFj"/>
@@ -95,8 +105,5 @@
     </objects>
     <resources>
         <image name="kingfisher-1.jpg" width="250" height="250"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

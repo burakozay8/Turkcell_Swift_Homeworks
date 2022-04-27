@@ -14,10 +14,7 @@ protocol DetailPresenterProtocol: AnyObject {
     func addFavoritesButtonTapped()
     func addFavoritesMovie(id: Int)
     func didSelectItemAt(index: Int)
-}
-
-protocol DetailPresenterDelegate: AnyObject {
-    func addFavoritesButtonTapped(id: Int)
+    func loadDetail()
 }
 
 final class DetailPresenter {
@@ -25,12 +22,11 @@ final class DetailPresenter {
     unowned var view: DetailViewControllerProtocol?
     let router: DetailRouterProtocol?
     let interactor: DetailInteractorProtocol?
-    weak var delegate: DetailPresenterDelegate?
     
     private var movieDetail: MovieDetailResponse?
     private var similarMovies: [MovieResult] = []
     
-    var favoriteStatus: Bool = false //modele alınabilir? mi?
+    private var favoriteStatus: Bool = false //modele alınabilir? mi?
     
     init(view: DetailViewControllerProtocol?, router: DetailRouterProtocol?, interactor: DetailInteractorProtocol?) {
         self.view = view
@@ -63,6 +59,7 @@ extension DetailPresenter: DetailPresenterProtocol {
         let buttonSystemName = favoriteStatus ? "star.fill" : "star"
         view?.setfavButtonImage(buttonSystemName, isAdded: isAddedFavorites())
     }
+    
     var numberOfItems: Int {
         similarMovies.count
     }
@@ -74,7 +71,7 @@ extension DetailPresenter: DetailPresenterProtocol {
     func addFavoritesButtonTapped() {
         favoriteStatus.toggle()
         if let id = movieDetail?.id {
-            delegate?.addFavoritesButtonTapped(id: id)
+            view?.addFavoritesButtonTapped(id: id)
         }
         let buttonSystemName = favoriteStatus ? "star.fill" : "star"
         view?.setfavButtonImage(buttonSystemName, isAdded: !isAddedFavorites())
@@ -82,12 +79,18 @@ extension DetailPresenter: DetailPresenterProtocol {
     
     func addFavoritesMovie(id: Int) {
         //TODO: kaydet!!
-        print("********************movie added to favorites") //fonk çalışmıyor.
+        print("******************** updated favorites")
     }
     
     func didSelectItemAt(index: Int) {
         guard let similarMovie = similarMovie(index) else { return }
         router?.navigate(.detail(similarMovie: similarMovie))
+    }
+    
+    func loadDetail() {
+//        view?.showLoadingView()
+        view?.showMovieDetail(movieDetail)
+//        view?.hideLoadingView()
     }
     
 }
