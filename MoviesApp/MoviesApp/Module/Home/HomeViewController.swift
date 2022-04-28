@@ -13,42 +13,44 @@ protocol HomeViewControllerProtocol: AnyObject {
     func showLoadingView()
     func hideLoadingView()
     func setupCollectionViews()
-    //TODO: SearchBar?!
+    func setupTableView()
+    func reloadDataForTableView()
 }
 
-final class HomeViewController: UIViewController, LoadingShowable, UISearchControllerDelegate {
+final class HomeViewController: UIViewController, LoadingShowable{
     
     var presenter: HomePresenterProtocol?
-    var searchViewController = SearchViewController()
     
     var timer = Timer()
     var currentPage = 0
+    var customGray = UIColor(rgb: 0x373737)
     
     @IBOutlet weak var topCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var bottomCollectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var homeStackView: UIStackView!
+    @IBOutlet weak var searchTableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+        searchTableView.isHidden = true
+        searchBar.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureSearchController()
+        configureSearchBar()
     }
     
-    func configureSearchController() {
-        let searchController = UISearchController(searchResultsController: searchViewController)
-        searchController.searchBar.placeholder = "Search"
-        searchController.delegate = self
-        searchController.searchResultsUpdater = searchViewController
-        searchController.searchBar.delegate = searchViewController
-        searchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.searchController = searchController
-        searchController.searchBar.tintColor = UIColor.white
-        definesPresentationContext = true
+    private func configureSearchBar() {
+        searchBar.searchTextField.backgroundColor = customGray
+        searchBar.searchTextField.leftView?.tintColor = .systemGray4
+        searchBar.searchTextField.textColor = .white
+        searchBar.backgroundImage = UIImage()
+        searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search", attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemGray4])
     }
     
     private func autoSlideForTopCollectionView() {
@@ -102,6 +104,16 @@ extension HomeViewController: HomeViewControllerProtocol {
         bottomCollectionView.dataSource = self
         topCollectionView.register(cellType: NowPlayingMovieCell.self)
         bottomCollectionView.register(cellType: UpcomingMoviesCell.self)
+    }
+    
+    func setupTableView() {
+        searchTableView.delegate = self
+        searchTableView.dataSource = self
+        searchTableView.register(cellType: SearchCell.self)
+    }
+    
+    func reloadDataForTableView() {
+        searchTableView.reloadData()
     }
     
 }
@@ -174,3 +186,50 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
+
+extension HomeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter?.numberOfRowsForSearchedMovies ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = searchTableView.dequeueReusableCell(with: SearchCell.self, for: indexPath)
+        cell.selectionStyle = .none
+        if let searchMovie = presenter?.searchedMovie(indexPath.row) {
+            cell.titleLabel.text = searchMovie.title
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+         return 50
+    }
+    
+}
+
+extension HomeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectRowAtForSearchedMovies(index: indexPath.row)
+    }
+    
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count >= 2 {
+            presenter?.searchMovie(searchText)
+            homeStackView.isHidden = true
+            searchTableView.isHidden = false
+        } else if searchText.isEmpty {
+            homeStackView.isHidden = false
+            searchTableView.isHidden = true
+            searchBar.endEditing(true)
+        }
+    }
+
+}
+
+

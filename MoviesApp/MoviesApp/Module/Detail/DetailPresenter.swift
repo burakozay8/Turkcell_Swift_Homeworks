@@ -14,7 +14,7 @@ protocol DetailPresenterProtocol: AnyObject {
     func addFavoritesButtonTapped()
     func addFavoritesMovie(id: Int)
     func didSelectItemAt(index: Int)
-    func loadDetail()
+//    func loadDetail()
 }
 
 final class DetailPresenter {
@@ -77,9 +77,12 @@ extension DetailPresenter: DetailPresenterProtocol {
         view?.setfavButtonImage(buttonSystemName, isAdded: !isAddedFavorites())
     }
     
-    func addFavoritesMovie(id: Int) {
-        //TODO: kaydet!!
-        print("******************** updated favorites")
+    func addFavoritesMovie(id: Int) { //kayıt oluyor ama buton dolmuyor.
+        if !favoriteStatus {
+            print("******************** ???")
+        } else {
+            MovieRepository().saveMovieID(id: id)
+        }
     }
     
     func didSelectItemAt(index: Int) {
@@ -87,11 +90,11 @@ extension DetailPresenter: DetailPresenterProtocol {
         router?.navigate(.detail(similarMovie: similarMovie))
     }
     
-    func loadDetail() {
-//        view?.showLoadingView()
-        view?.showMovieDetail(movieDetail)
-//        view?.hideLoadingView()
-    }
+//    func loadDetail() {
+////        view?.showLoadingView()
+//        view?.showMovieDetail(movieDetail)
+////        view?.hideLoadingView()
+//    }
     
 }
 
@@ -102,6 +105,7 @@ extension DetailPresenter: DetailInteractorOutputProtocol {
         switch result {
         case .success(let detailResult):
             movieDetail = detailResult
+            view?.showMovieDetail(movieDetail)
         case .failure(let error):
             print(error)
         }

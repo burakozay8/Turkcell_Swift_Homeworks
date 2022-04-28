@@ -17,7 +17,6 @@ protocol DetailViewControllerProtocol: AnyObject {
     func showMovieDetail(_ movieDetail: MovieDetailResponse?)
     func setfavButtonImage(_ systemName: String, isAdded: Bool)
     func addFavoritesButtonTapped(id: Int)
-    
 }
 
 final class DetailViewController: UIViewController, LoadingShowable {
@@ -31,23 +30,22 @@ final class DetailViewController: UIViewController, LoadingShowable {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var presenter: DetailPresenterProtocol?
-    
     var movie: MovieResult?
-//    var similarMovie: MovieResult? //??
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter?.loadDetail()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        presenter?.loadDetail()
+//    }
+    
+//    override func viewDidAppear(_ animated: Bool) { // ??
+//        super.viewDidAppear(animated)
+//        presenter?.loadDetail()
+//    }
     
     private func prepareImage(with urlString: String) {
         let fullPath = "https://image.tmdb.org/t/p/w500\(urlString)"

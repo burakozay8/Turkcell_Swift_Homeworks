@@ -19,7 +19,7 @@ protocol DetailInteractorOutputProtocol: AnyObject {
 }
 
 typealias MovieDetailResult = Result<MovieDetailResponse, Error>
-typealias SimilarMoviesResult = Result<SimilarMoviesResponse, Error>
+//typealias SimilarMoviesResult = Result<SimilarMoviesResponse, Error>
 fileprivate var moviesService: MoviesServiceProtocol = MoviesService()
 
 final class DetailInteractor {
