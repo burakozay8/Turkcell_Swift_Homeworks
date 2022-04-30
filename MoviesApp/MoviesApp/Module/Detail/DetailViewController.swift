@@ -21,13 +21,13 @@ protocol DetailViewControllerProtocol: AnyObject {
 
 final class DetailViewController: UIViewController, LoadingShowable {
 
-    @IBOutlet weak var movieDetailImageView: UIImageView!
-    @IBOutlet weak var movieTitleLabel: UILabel!
-    @IBOutlet weak var movieOverviewLabel: UILabel!
+    @IBOutlet private weak var movieDetailImageView: UIImageView!
+    @IBOutlet private weak var movieTitleLabel: UILabel!
+    @IBOutlet private weak var movieOverviewLabel: UILabel!
     @IBOutlet weak var favButton: UIButton!
-    @IBOutlet weak var movieRatingLabel: UILabel!
-    @IBOutlet weak var movieReleaseDateLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var movieRatingLabel: UILabel!
+    @IBOutlet private weak var movieReleaseDateLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     var presenter: DetailPresenterProtocol?
     var movie: MovieResult?
@@ -37,23 +37,22 @@ final class DetailViewController: UIViewController, LoadingShowable {
         presenter?.viewDidLoad()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        presenter?.loadDetail()
-//    }
-    
-//    override func viewDidAppear(_ animated: Bool) { // ??
-//        super.viewDidAppear(animated)
-//        presenter?.loadDetail()
-//    }
-    
     private func prepareImage(with urlString: String) {
-        let fullPath = "https://image.tmdb.org/t/p/w500\(urlString)"
         
+        let fullPath = "https://image.tmdb.org/t/p/w500\(urlString)"
+
         if let url = URL(string: fullPath) {
             movieDetailImageView.kf.indicatorType = .activity
-            movieDetailImageView.kf.setImage(with: url)
+            movieDetailImageView.kf.setImage(with: url) { result in
+            switch result {
+                case .success(_):
+                    break
+                case .failure(_):
+                    self.movieDetailImageView.image = UIImage(named: "no-image-available.png")
+                }
+            }
         }
+        
     }
     
     @IBAction func addFavorites(_ sender: Any) {

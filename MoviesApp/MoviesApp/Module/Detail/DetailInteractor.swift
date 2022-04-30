@@ -10,7 +10,6 @@ import Foundation
 protocol DetailInteractorProtocol: AnyObject {
     func fetchMovieDetail(with movieID: Int)
     func fetchSimilarMovies(with movieID: Int)
-    // func refreshMovieDetail...??
 }
 
 protocol DetailInteractorOutputProtocol: AnyObject {
@@ -19,7 +18,6 @@ protocol DetailInteractorOutputProtocol: AnyObject {
 }
 
 typealias MovieDetailResult = Result<MovieDetailResponse, Error>
-//typealias SimilarMoviesResult = Result<SimilarMoviesResponse, Error>
 fileprivate var moviesService: MoviesServiceProtocol = MoviesService()
 
 final class DetailInteractor {

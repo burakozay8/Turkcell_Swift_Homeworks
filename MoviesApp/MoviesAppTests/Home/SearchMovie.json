@@ -1,0 +1,390 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/sd4xN5xi8tKRPrJOWwNiZEile7f.jpg",
+      "genre_ids": [
+        16,
+        12,
+        35,
+        10751
+      ],
+      "id": 920,
+      "original_language": "en",
+      "original_title": "Cars",
+      "overview": "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.",
+      "popularity": 71.92,
+      "poster_path": "/qa6HCwP4Z15l3hpsASz3auugEW6.jpg",
+      "release_date": "2006-06-08",
+      "title": "Cars",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 11550
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4mlS1MitcOqdPLhxEFyk9Qwf5rr.jpg",
+      "genre_ids": [
+        16,
+        12,
+        35,
+        10751
+      ],
+      "id": 260514,
+      "original_language": "en",
+      "original_title": "Cars 3",
+      "overview": "Blindsided by a new generation of blazing-fast racers, the legendary Lightning McQueen is suddenly pushed out of the sport he loves. To get back in the game, he will need the help of an eager young race technician with her own plan to win, inspiration from the late Fabulous Hudson Hornet, and a few unexpected turns. Proving that #95 isn't through yet will test the heart of a champion on Piston Cup Racing’s biggest stage!",
+      "popularity": 106.846,
+      "poster_path": "/fyy1nDC8wm553FCiBDojkJmKLCs.jpg",
+      "release_date": "2017-06-15",
+      "title": "Cars 3",
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 4488
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jrlq8lWxB3OKjKwJ0kCjtg5fIII.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        12,
+        35
+      ],
+      "id": 49013,
+      "original_language": "en",
+      "original_title": "Cars 2",
+      "overview": "Star race car Lightning McQueen and his pal Mater head overseas to compete in the World Grand Prix race. But the road to the championship becomes rocky as Mater gets caught up in an intriguing adventure of his own: international espionage.",
+      "popularity": 101.429,
+      "poster_path": "/okIz1HyxeVOMzYwwHUjH2pHi74I.jpg",
+      "release_date": "2011-06-11",
+      "title": "Cars 2",
+      "video": false,
+      "vote_average": 6,
+      "vote_count": 6221
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        
+      ],
+      "id": 485621,
+      "original_language": "en",
+      "original_title": "Cars D'oeuvres",
+      "overview": "Characters from Pixar's Cars 3 participate in goofy antics.",
+      "popularity": 10.343,
+      "poster_path": "/ppqxzUP0XmllXD8bQGmggY6hCEL.jpg",
+      "release_date": "2017-11-07",
+      "title": "Cars D'oeuvres",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 7
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cNA5G0sp1mHPmOC55WxT5L3m1P7.jpg",
+      "genre_ids": [
+        16,
+        35,
+        10751
+      ],
+      "id": 438788,
+      "original_language": "en",
+      "original_title": "Cars Toon Mater's Tall Tales",
+      "overview": "Mater the tow truck travels from country to country as he retells his infamous but unbelievable stories.",
+      "popularity": 23.094,
+      "poster_path": "/eu57jZr6kK8ZsoONzBi3EcwESVZ.jpg",
+      "release_date": "2010-10-31",
+      "title": "Cars Toon Mater's Tall Tales",
+      "video": true,
+      "vote_average": 6.5,
+      "vote_count": 86
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9E6fcaDu2WD2OnfPMmdEc9KKKUL.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 14475,
+      "original_language": "en",
+      "original_title": "Used Cars",
+      "overview": "When the owner of a struggling used car lot is killed, it's up to the lot's hot-shot salesman to save the property from falling into the hands of the owner's ruthless brother and used-car rival.",
+      "popularity": 11.205,
+      "poster_path": "/h9hqesyEBaag8ZkgrBSaUGgGNFF.jpg",
+      "release_date": "1980-07-11",
+      "title": "Used Cars",
+      "video": false,
+      "vote_average": 6.4,
+      "vote_count": 172
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3PvY605hDJLO24HgSpyywFDwqUR.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 345874,
+      "original_language": "en",
+      "original_title": "Stealing Cars",
+      "overview": "A rebellious teenager navigates his way through the juvenile court system.",
+      "popularity": 6.902,
+      "poster_path": "/8gQrJqQXksT9RCPbmd8AFQtx7vT.jpg",
+      "release_date": "2016-04-05",
+      "title": "Stealing Cars",
+      "video": false,
+      "vote_average": 6.2,
+      "vote_count": 27
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wXax3nRWlZDfRqgrmBIKfE2OnaJ.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 11091,
+      "original_language": "en",
+      "original_title": "Riding in Cars with Boys",
+      "overview": "A single mother, with dreams of becoming a writer, has a son at the age of 15 in 1965, and goes through a failed marriage with the drug-addicted father.",
+      "popularity": 11.253,
+      "poster_path": "/1xzvRrpA9V1TxXP7kIf8d0AgJ1R.jpg",
+      "release_date": "2001-10-19",
+      "title": "Riding in Cars with Boys",
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 371
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/j5SWztnnNERAqvA19tyl6Tm7eAJ.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 51896,
+      "original_language": "en",
+      "original_title": "Two Cars, One Night",
+      "overview": "Sometimes first love is found in the most unlikely of places, like in the carpark outside the Te Kaha pub.",
+      "popularity": 3.797,
+      "poster_path": "/3DmR3jZ9BOXsbzmeUQGAWhkempB.jpg",
+      "release_date": "2004-06-09",
+      "title": "Two Cars, One Night",
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 41
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/LhNAYzoYqJssVojll2eyKLonu6.jpg",
+      "genre_ids": [
+        35,
+        27,
+        9648,
+        53
+      ],
+      "id": 62761,
+      "original_language": "en",
+      "original_title": "The Cars That Ate Paris",
+      "overview": "After the death of his brother on the road, unemployed and unstable drifter Arthur Waldo stays for a while in the rural Australian town of Paris as the guest of the mayor, who hopes he will become a permanent member of the Paris population. Arthur soon realizes the quaint hamlet has a sinister secret: they orchestrate car accidents and rob the victims. Survivors are brought to the local hospital, lobotomized, and used for a local doctor's experiments.",
+      "popularity": 6.246,
+      "poster_path": "/1jAbfwNPSGgCZ68FjGD39XpXsrB.jpg",
+      "release_date": "1974-10-10",
+      "title": "The Cars That Ate Paris",
+      "video": false,
+      "vote_average": 5.3,
+      "vote_count": 59
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/A7h5h8aH1J8HwD4C2fRuV11geZe.jpg",
+      "genre_ids": [
+        16
+      ],
+      "id": 945983,
+      "original_language": "en",
+      "original_title": "Paw Patrol and Blaze and Wonder Cars",
+      "overview": "Paw Patrol is waiting for new knightly adventures! Puppy Fang finds magical flowers that turn the dragon's breath into ice, and freezes the entire Havkenburg. And the Chaser manages to get the legendary bone of Gavkalibur, and now he becomes a royal knight and tries to interfere with the insidious plans of the Duke of Boltunsky. At this time, Flash and AJ face an equally difficult task - in Axl City, all the toothbrushes have mysteriously disappeared. Will the heroes be able to find the kidnapper and return the loss to the residents?",
+      "popularity": 5.809,
+      "poster_path": "/xPBhYx4yU5PCY4Sp8PCjmb9QdtW.jpg",
+      "release_date": "2022-03-03",
+      "title": "Paw Patrol and Blaze and Wonder Cars",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        99
+      ],
+      "id": 324260,
+      "original_language": "en",
+      "original_title": "Bikes vs Cars",
+      "overview": "Bikes vs Cars depicts a global crisis that we all deep down know we need to talk about: Climate, earth's resources, cities where the entire surface is consumed by the car. An ever-growing, dirty, noisy traffic chaos. The bike is a great tool for change, but the powerful interests who gain from the private car invest billions each year on lobbying and advertising to protect their business. In the film we meet activists and thinkers who are fighting for better cities, who refuse to stop riding despite the increasing number killed in traffic.",
+      "popularity": 2.656,
+      "poster_path": "/rQsEzkCyYxyO87Q1cypvm1lKAZA.jpg",
+      "release_date": "2015-03-15",
+      "title": "Bikes vs Cars",
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 20
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fOa9YkVGRtH72JEsVMJdbwyqpWB.jpg",
+      "genre_ids": [
+        80,
+        35,
+        14,
+        27
+      ],
+      "id": 814764,
+      "original_language": "en",
+      "original_title": "Eating Cars",
+      "overview": "Max, a failed writer, goes in search of her estranged girlfriend while simultaneously, trying to unload a large quantity of drugs she stole off her bosses to pay for a trip back East to care for her dying mother. She also might have her dead sister in the trunk of her car.",
+      "popularity": 1.847,
+      "poster_path": "/A0F9HKeyZJL9Y5TAzVD1UKhsmD5.jpg",
+      "release_date": "2021-09-26",
+      "title": "Eating Cars",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/f5V4xruQ32iQtYJ0WqnD5nHmXXK.jpg",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 38338,
+      "original_language": "en",
+      "original_title": "Hot Cars",
+      "overview": "Story of a salesman lured into the \"hot car\" racket.",
+      "popularity": 1.796,
+      "poster_path": "/ulebuzTwzPgRLMxOTcrFrARgI9K.jpg",
+      "release_date": "1956-01-01",
+      "title": "Hot Cars",
+      "video": false,
+      "vote_average": 6,
+      "vote_count": 7
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        
+      ],
+      "id": 823117,
+      "original_language": "en",
+      "original_title": "Funny Little Cars 2: Fun at Oasis City",
+      "overview": "In this follow-up to their Little Oaza adventures, our vehicular friends come fender to fender with shady businesses looking to destroy Doom Valley.",
+      "popularity": 6.916,
+      "poster_path": "/CmqZuclSpZ7WHppOztp1IACAb3.jpg",
+      "release_date": "2020-01-01",
+      "title": "Funny Little Cars 2: Fun at Oasis City",
+      "video": false,
+      "vote_average": 3.3,
+      "vote_count": 3
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 147771,
+      "original_language": "de",
+      "original_title": "Killing Cars",
+      "overview": "In a complex story of automotive intrigue, oil barons, corporate finance, and international villainy, the inventor of an environmentally friendly car powered by energy cells becomes the target of killers. After Ralph Korda has given his patented worldcar to a German automaker for testing, he is confronted by ominous men, eager to get their hands on his patent. Evil Arab petroleum lords also want to stop this threat to the gasoline market any way they can.",
+      "popularity": 1.583,
+      "poster_path": "/bm8zHlVOlYwJu7GOYgKc9QZLRS2.jpg",
+      "release_date": "1986-02-13",
+      "title": "Killing Cars",
+      "video": false,
+      "vote_average": 4.3,
+      "vote_count": 3
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        18
+      ],
+      "id": 623991,
+      "original_language": "en",
+      "original_title": "Li'l Cars",
+      "overview": "A women loses her child and enlists the help of a psychic to contact him through his toys cars. Spooky stuff happens when the cars are put in order.",
+      "popularity": 0.928,
+      "poster_path": "/6JKvNA2nSY8vSR4ChBcAiBeObk8.jpg",
+      "release_date": "2018-08-19",
+      "title": "Li'l Cars",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        18
+      ],
+      "id": 793714,
+      "original_language": "en",
+      "original_title": "All My Cars.",
+      "overview": "A boy looks through his collection of cars.",
+      "popularity": 0.601,
+      "poster_path": "/kmAsK85i3lyrZZDktJgUw2VyDhB.jpg",
+      "release_date": "2018-03-23",
+      "title": "All My Cars.",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7mwKTQyATD6LvAwUJiW9luZqQ63.jpg",
+      "genre_ids": [
+        
+      ],
+      "id": 460116,
+      "original_language": "en",
+      "original_title": "When Cars Attack",
+      "overview": "Utilizing footage from various police pursuit features and traffic cameras, this mockumentary's sardonic host (Richard Belzer) demonstrates how automobiles and other evil steel monsters can capture and confine their unsuspecting and allegedly powerless operators while causing tremendous mayhem on our streets and highways. IE - it's not the irresponsible drunk drivers and criminals who do these things, it's their cars. The human occupants are simply victims.",
+      "popularity": 1.341,
+      "poster_path": "/A7VAiOcXhC0kWfCFjHlDhX195KW.jpg",
+      "release_date": "1997-10-01",
+      "title": "When Cars Attack",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        
+      ],
+      "id": 811913,
+      "original_language": "en",
+      "original_title": "Cars",
+      "overview": "“I don’t drive, but I know people who’ll drive 100 metres to go to the shops. Our society is obsessed with the car, with coming and going, getting somewhere. I used very intricate matting, some shaped like knives. I wanted the cars to slice each other in two, creating a kind of hurdy gurdy atmosphere…an abstract rushing to and fro, going nowhere. The first half of the film is silent. The second half, a grainy dupe of the same images, has sound and is far more urgent and aggressive.” (Paul Winkler)",
+      "popularity": 0.6,
+      "poster_path": "/q6cF3LzBgPJghOb1UQHUGD8v8Hg.jpg",
+      "release_date": "1979-01-01",
+      "title": "Cars",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    }
+  ],
+  "total_pages": 13,
+  "total_results": 255
+}
+

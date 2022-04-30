@@ -15,8 +15,8 @@ protocol NowPlayingMovieCellProtocol: AnyObject {
 
 final class NowPlayingMovieCell: UICollectionViewCell {
 
-    @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet var movieTitleLabel: UILabel!
+    @IBOutlet private weak var movieImageView: UIImageView!
+    @IBOutlet private weak var movieTitleLabel: UILabel!
     
     var cellPresenter: NowPlayingMovieCellPresenterProtocol? {
         didSet {

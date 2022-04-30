@@ -21,9 +21,9 @@ final class HomeViewController: UIViewController, LoadingShowable{
     
     var presenter: HomePresenterProtocol?
     
-    var timer = Timer()
-    var currentPage = 0
-    var customGray = UIColor(rgb: 0x373737)
+    private var timer = Timer()
+    private var currentPage = 0
+    private var customGray = UIColor(rgb: 0x373737)
     
     @IBOutlet weak var topCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -38,11 +38,20 @@ final class HomeViewController: UIViewController, LoadingShowable{
         presenter?.viewDidLoad()
         searchTableView.isHidden = true
         searchBar.delegate = self
+        configureNavigationIcon()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureSearchBar()
+    }
+    
+    private func configureNavigationIcon() {
+        let image: UIImage = UIImage(named: "popcorn-48.png")!
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        self.navigationItem.titleView = imageView
     }
     
     private func configureSearchBar() {
@@ -162,7 +171,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == bottomCollectionView {
-            return CGSize(width: UIScreen.main.bounds.width - 20, height: 105)
+            return CGSize(width: UIScreen.main.bounds.width - 20, height: 90)
         } else {
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         }

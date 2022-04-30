@@ -14,7 +14,6 @@ protocol DetailPresenterProtocol: AnyObject {
     func addFavoritesButtonTapped()
     func addFavoritesMovie(id: Int)
     func didSelectItemAt(index: Int)
-//    func loadDetail()
 }
 
 final class DetailPresenter {
@@ -27,6 +26,7 @@ final class DetailPresenter {
     private var similarMovies: [MovieResult] = []
     
     private var favoriteStatus: Bool = false //modele alınabilir? mi?
+    private var isGameInFavorites: Bool = false
     
     init(view: DetailViewControllerProtocol?, router: DetailRouterProtocol?, interactor: DetailInteractorProtocol?) {
         self.view = view
@@ -45,6 +45,21 @@ final class DetailPresenter {
     
     private func isAddedFavorites() -> Bool {
         favoriteStatus ? true : false
+    }
+    
+    private func loadFavorite() { // kod düzeltilebilir.
+        if let id = movieDetail?.id {
+            isGameInFavorites = MovieRepository().checkMovieIsInFavorites(movieID: id)
+        }
+        if isGameInFavorites {
+            favoriteStatus = true
+            let buttonSystemName = favoriteStatus ? "star.fill" : "star"
+            view?.setfavButtonImage(buttonSystemName, isAdded: !isAddedFavorites())
+        } else {
+            favoriteStatus = false
+            let buttonSystemName = favoriteStatus ? "star.fill" : "star"
+            view?.setfavButtonImage(buttonSystemName, isAdded: isAddedFavorites())
+        }
     }
     
 }
@@ -77,11 +92,11 @@ extension DetailPresenter: DetailPresenterProtocol {
         view?.setfavButtonImage(buttonSystemName, isAdded: !isAddedFavorites())
     }
     
-    func addFavoritesMovie(id: Int) { //kayıt oluyor ama buton dolmuyor.
+    func addFavoritesMovie(id: Int) {
         if !favoriteStatus {
-            print("******************** ???")
+            MovieRepository().deleteMovieFromEntity(movieID: id)
         } else {
-            MovieRepository().saveMovieID(id: id)
+            MovieRepository().saveMovieToEntity(id: id)
         }
     }
     
@@ -89,12 +104,6 @@ extension DetailPresenter: DetailPresenterProtocol {
         guard let similarMovie = similarMovie(index) else { return }
         router?.navigate(.detail(similarMovie: similarMovie))
     }
-    
-//    func loadDetail() {
-////        view?.showLoadingView()
-//        view?.showMovieDetail(movieDetail)
-////        view?.hideLoadingView()
-//    }
     
 }
 
@@ -106,6 +115,7 @@ extension DetailPresenter: DetailInteractorOutputProtocol {
         case .success(let detailResult):
             movieDetail = detailResult
             view?.showMovieDetail(movieDetail)
+            loadFavorite()
         case .failure(let error):
             print(error)
         }
