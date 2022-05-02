@@ -8,7 +8,7 @@
 import XCTest
 @testable import MoviesApp
 
-class MoviesAppDetailTests: XCTestCase {
+final class MoviesAppDetailTests: XCTestCase {
 
     var detailPresenter: DetailPresenter!
     var detailView: MockDetailViewController!
@@ -29,28 +29,36 @@ class MoviesAppDetailTests: XCTestCase {
         detailRouter = nil
     }
     
-    func test_viewDidLoad_InvokesRequiredViewMethods() {
+    func test_viewDidLoad_InvokesRequiredMethods() {
         XCTAssertFalse(detailView.isCollectionViewCreated, "Your value is TRUE but you are expecting FALSE.")
         XCTAssertFalse(detailInteractor.isFetchMovieDetailInvoked, "Your value is TRUE but you are expecting FALSE.")
         XCTAssertFalse(detailInteractor.isFetchSimilarMoviesInvoked, "Your value is TRUE but you are expecting FALSE.")
+        XCTAssertFalse(detailView.isFavButtonSet, "Your value is TRUE but you are expecting FALSE.")
         detailPresenter.viewDidLoad()
         XCTAssertTrue(detailView.isCollectionViewCreated, "Your value is FALSE but you are expecting TRUE")
         XCTAssertTrue(detailInteractor.isFetchMovieDetailInvoked, "Your value is FALSE but you are expecting TRUE.")
         XCTAssertTrue(detailInteractor.isFetchSimilarMoviesInvoked, "Your value is FALSE but you are expecting TRUE.")
+        XCTAssertTrue(detailView.isFavButtonSet, "Your value is FALSE but you are expecting TRUE.")
     }
     
     func test_fetchMovieDetail() {
+        XCTAssertFalse(detailView.isHideLoadingInvoked, "Your value is TRUE but you are expecting FALSE.")
         XCTAssertFalse(detailView.isMovieDetailShown, "Your value is TRUE but you are expecting FALSE.")
+        XCTAssertNil(detailView.movieDetailTitle, "Movie title did not come NIL.")
         detailPresenter.fetchMovieDetailOutput(result: .success(MovieDetailResult.movieDetailResponse))
         XCTAssertTrue(detailView.isMovieDetailShown, "Your value is FALSE but you are expecting TRUE.")
+        XCTAssertTrue(detailView.isHideLoadingInvoked, "Your value is FALSE but you are expecting TRUE.")
+        XCTAssertEqual(detailView.movieDetailTitle, "The Santa Clause 2")
     }
     
-    func test_fetchSearchMovie() {
+    func test_fetchSimilarMovies() {
         XCTAssertNil(detailPresenter.similarMovie(0)?.title, "Movie title did not come NIL.")
         XCTAssertEqual(detailPresenter.numberOfItems, 0)
+        XCTAssertFalse(detailView.isCollectionViewReloaded, "Your value is TRUE but you are expecting FALSE.")
         detailPresenter.fetchSimilarMovies(result: .success(MoviesResult.similarMoviesResponse))
         XCTAssertEqual(detailPresenter.similarMovie(0)?.title, "The Mothman Prophecies")
         XCTAssertEqual(detailPresenter.numberOfItems, 20)
+        XCTAssertTrue(detailView.isCollectionViewReloaded, "Your value is FALSE but you are expecting TRUE.")
     }
 
 }

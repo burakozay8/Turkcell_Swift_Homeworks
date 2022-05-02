@@ -228,11 +228,11 @@
 			isa = PBXGroup;
 			children = (
 				4275FCC1281C2D0E0025F8EE /* MovieDetail.json */,
+				42922CE9281D4ECA0054D631 /* SimilarMovies.json */,
 				42922CDE281D45E50054D631 /* MockDetailViewController.swift */,
 				42922CE0281D467F0054D631 /* MockDetailInteractor.swift */,
 				42922CE2281D474B0054D631 /* MockDetailRouter.swift */,
 				42922CDA281D45650054D631 /* MoviesAppDetailTests.swift */,
-				42922CE9281D4ECA0054D631 /* SimilarMovies.json */,
 			);
 			path = Detail;
 			sourceTree = "<group>";

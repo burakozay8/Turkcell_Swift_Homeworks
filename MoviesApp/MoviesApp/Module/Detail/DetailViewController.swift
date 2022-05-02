@@ -34,6 +34,7 @@ final class DetailViewController: UIViewController, LoadingShowable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        accessibilityIdentifiers()
         presenter?.viewDidLoad()
     }
     
@@ -138,4 +139,13 @@ extension DetailViewController: UICollectionViewDelegateFlowLayout {
             12
     }
 
+}
+
+extension DetailViewController {
+    
+    func accessibilityIdentifiers() {
+        movieTitleLabel.accessibilityIdentifier = "movieTitleLabel"
+        favButton.accessibilityIdentifier = "favButton"
+    }
+    
 }

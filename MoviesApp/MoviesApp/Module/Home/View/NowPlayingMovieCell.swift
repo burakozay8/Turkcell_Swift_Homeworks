@@ -25,12 +25,21 @@ final class NowPlayingMovieCell: UICollectionViewCell {
     }
     
     private func prepareBackDropImage(with urlString: String) {
-        let fullPath = "https://image.tmdb.org/t/p/w500\(urlString)"
         
+        let fullPath = "https://image.tmdb.org/t/p/w500\(urlString)"
+
         if let url = URL(string: fullPath) {
             movieImageView.kf.indicatorType = .activity
-            movieImageView.kf.setImage(with: url)
+            movieImageView.kf.setImage(with: url) { result in
+            switch result {
+                case .success(_):
+                    break
+                case .failure(_):
+                    self.movieImageView.image = UIImage(named: "no-image-available.png")
+                }
+            }
         }
+        
     }
     
 }
@@ -38,17 +47,6 @@ final class NowPlayingMovieCell: UICollectionViewCell {
 extension NowPlayingMovieCell: NowPlayingMovieCellProtocol {
 
     func setImageView(_ imageURL: String) {
-//        let url = URL(string: imageURL)
-//
-//        movieImageView.kf.indicatorType = .activity
-//        movieImageView.kf.setImage(with: url) { result in
-//            switch result {
-//            case .success(let value):
-//                break
-//            case .failure(_):
-//                self.movieImageView.image = UIImage(systemName: "star")
-//            }
-//        }
         prepareBackDropImage(with: imageURL)
     }
     

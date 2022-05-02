@@ -11,23 +11,38 @@ import Foundation
 final class MockHomeViewController: HomeViewControllerProtocol {
     
     var isTopCollectionViewCreated = false
+    var isTopCollectionViewReloaded = false
     var isBottomCollectionViewCreated = false
+    var isBottomCollectionViewReloaded = false
+    var isHideLoadingInvoked = false
+    var isTableViewCreated = false
+    var isTableViewReloaded = false
     
-    func reloadDataForTopCollectionView() {}
+    func reloadDataForTopCollectionView() {
+        isTopCollectionViewReloaded = true
+    }
     
-    func reloadDataForBottomCollectionView() {}
+    func reloadDataForBottomCollectionView() {
+        isBottomCollectionViewReloaded = true
+    }
     
     func showLoadingView() {}
     
-    func hideLoadingView() {}
+    func hideLoadingView() {
+        isHideLoadingInvoked = true
+    }
     
     func setupCollectionViews() {
         isTopCollectionViewCreated = true
         isBottomCollectionViewCreated = true
     }
     
-    func setupTableView() {}
+    func setupTableView() {
+        isTableViewCreated = true
+    }
     
-    func reloadDataForTableView() {}
+    func reloadDataForTableView() {
+        isTableViewReloaded = true
+    }
     
 }

@@ -43,7 +43,6 @@ final class HomePresenter {
     }
     
     fileprivate func fetchUpcomingMovies() {
-        view?.showLoadingView()
         interactor?.fetchUpcomingMovies()
     }
     
@@ -121,7 +120,6 @@ extension HomePresenter: HomeInteractorOutputProtocol {
     }
     
     func fetchUpcomingMoviesOutput(result: MoviesResult) {
-        view?.hideLoadingView()
         switch result {
         case .success(let moviesResult):
             upcomingMovies = moviesResult.results ?? []

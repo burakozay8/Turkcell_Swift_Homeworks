@@ -28,7 +28,7 @@ extension UpcomingMoviesCellPresenter: UpcomingMoviesCellPresenterProtcol {
     func load() {
         view?.setImage(movie?.backdropPath ?? "") //
         view?.setTitleLabel(movie?.title ?? "")
-        view?.setOverviewLabel(movie?.originalTitle ?? "")
+        view?.setOverviewLabel(movie?.overview ?? "") //
         view?.setReleaseDateLabel(movie?.releaseDate ?? "")
     }
     

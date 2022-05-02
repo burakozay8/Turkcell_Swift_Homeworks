@@ -25,8 +25,8 @@ final class DetailPresenter {
     private var movieDetail: MovieDetailResponse?
     private var similarMovies: [MovieResult] = []
     
-    private var favoriteStatus: Bool = false //modele alınabilir? mi?
-    private var isGameInFavorites: Bool = false
+    private var favoriteStatus: Bool = false
+    private var isMovieInFavorites: Bool = false
     
     init(view: DetailViewControllerProtocol?, router: DetailRouterProtocol?, interactor: DetailInteractorProtocol?) {
         self.view = view
@@ -47,11 +47,11 @@ final class DetailPresenter {
         favoriteStatus ? true : false
     }
     
-    private func loadFavorite() { // kod düzeltilebilir.
+    private func showFavorite() {
         if let id = movieDetail?.id {
-            isGameInFavorites = MovieRepository().checkMovieIsInFavorites(movieID: id)
+            isMovieInFavorites = MovieRepository().checkMovieIsInFavorites(movieID: id)
         }
-        if isGameInFavorites {
+        if isMovieInFavorites {
             favoriteStatus = true
             let buttonSystemName = favoriteStatus ? "star.fill" : "star"
             view?.setfavButtonImage(buttonSystemName, isAdded: !isAddedFavorites())
@@ -115,7 +115,7 @@ extension DetailPresenter: DetailInteractorOutputProtocol {
         case .success(let detailResult):
             movieDetail = detailResult
             view?.showMovieDetail(movieDetail)
-            loadFavorite()
+            showFavorite()
         case .failure(let error):
             print(error)
         }

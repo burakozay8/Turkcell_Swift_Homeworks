@@ -17,13 +17,14 @@ protocol HomeViewControllerProtocol: AnyObject {
     func reloadDataForTableView()
 }
 
-final class HomeViewController: UIViewController, LoadingShowable{
+final class HomeViewController: UIViewController, LoadingShowable {
     
     var presenter: HomePresenterProtocol?
     
     private var timer = Timer()
     private var currentPage = 0
     private var customGray = UIColor(rgb: 0x373737)
+    private var noResultsView: NoResultsView!
     
     @IBOutlet weak var topCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -35,6 +36,7 @@ final class HomeViewController: UIViewController, LoadingShowable{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAccessibilityIdentifiers()
         presenter?.viewDidLoad()
         searchTableView.isHidden = true
         searchBar.delegate = self
@@ -140,12 +142,14 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == topCollectionView {
             let topCell = topCollectionView.dequeCell(cellType: NowPlayingMovieCell.self, indexPath: indexPath)
+            topCell.accessibilityIdentifier = "nowPlayingMovieCell_\(indexPath.row)"
             if let nowPlayingMovie = presenter?.nowPlayingMovie(indexPath.row) {
                 topCell.cellPresenter = NowPlayingMoviceCellPresenter(view: topCell, movie: nowPlayingMovie)
             }
             return topCell
         } else {
             let bottomCell = bottomCollectionView.dequeCell(cellType: UpcomingMoviesCell.self, indexPath: indexPath)
+            bottomCell.accessibilityIdentifier = "upcomingMovieCell_\(indexPath.row)"
             if let upcomingMovie = presenter?.upcomingMovie(indexPath.row) {
                 bottomCell.cellPresenter = UpcomingMoviesCellPresenter(view: bottomCell, movie: upcomingMovie)
             }
@@ -171,7 +175,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == bottomCollectionView {
-            return CGSize(width: UIScreen.main.bounds.width - 20, height: 90)
+            return CGSize(width: UIScreen.main.bounds.width - 20, height: 88)
         } else {
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         }
@@ -205,6 +209,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchTableView.dequeueReusableCell(with: SearchCell.self, for: indexPath)
         cell.selectionStyle = .none
+        cell.accessibilityIdentifier = "searchCell_\(indexPath.row)"
         if let searchMovie = presenter?.searchedMovie(indexPath.row) {
             cell.titleLabel.text = searchMovie.title
         }
@@ -239,6 +244,17 @@ extension HomeViewController: UISearchBarDelegate {
         }
     }
 
+}
+
+extension HomeViewController {
+    
+    func setAccessibilityIdentifiers() {
+        topCollectionView.accessibilityIdentifier = "topCollectionView"
+        bottomCollectionView.accessibilityIdentifier = "bottomCollectionView"
+        searchBar.accessibilityIdentifier = "searchBar"
+        searchTableView.accessibilityIdentifier = "searchTableView"
+    }
+    
 }
 
 

@@ -11,20 +11,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NowPlayingMovieCell" customModule="MoviesApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="397" height="189"/>
+            <rect key="frame" x="0.0" y="0.0" width="403" height="258"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="397" height="189"/>
+                <rect key="frame" x="0.0" y="0.0" width="403" height="258"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbp-tm-ofR">
-                        <rect key="frame" x="0.0" y="0.0" width="397" height="189"/>
+                        <rect key="frame" x="0.0" y="0.0" width="403" height="258"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="hWD-Qm-mvh">
-                                <rect key="frame" x="0.0" y="0.0" width="397" height="189"/>
+                                <rect key="frame" x="0.0" y="0.0" width="403" height="258"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qHs-ty-OSI">
-                                        <rect key="frame" x="2" y="0.0" width="393" height="166"/>
+                                        <rect key="frame" x="5" y="0.0" width="393" height="231.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="393" id="029-lA-rF6"/>
                                             <constraint firstAttribute="height" priority="999" constant="180" id="k3f-M0-s3c"/>
@@ -36,7 +36,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marriage Story(2019)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-2X-Ub6">
-                                        <rect key="frame" x="110.5" y="172" width="176.5" height="17"/>
+                                        <rect key="frame" x="113.5" y="237.5" width="176.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -62,12 +62,12 @@
                 <constraint firstAttribute="trailing" secondItem="vbp-tm-ofR" secondAttribute="trailing" id="m51-rU-eZd"/>
                 <constraint firstAttribute="bottom" secondItem="vbp-tm-ofR" secondAttribute="bottom" id="yiW-yR-uWw"/>
             </constraints>
-            <size key="customSize" width="397" height="189"/>
+            <size key="customSize" width="403" height="258"/>
             <connections>
                 <outlet property="movieImageView" destination="qHs-ty-OSI" id="orW-oI-LLB"/>
                 <outlet property="movieTitleLabel" destination="V8h-2X-Ub6" id="rFt-07-dYn"/>
             </connections>
-            <point key="canvasLocation" x="463.04347826086962" y="174.44196428571428"/>
+            <point key="canvasLocation" x="510.86956521739137" y="197.54464285714286"/>
         </collectionViewCell>
     </objects>
     <resources>

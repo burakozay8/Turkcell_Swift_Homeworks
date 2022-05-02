@@ -25,12 +25,21 @@ final class SimilarMovieCell: UICollectionViewCell {
     }
     
     private func preparePosterImage(with urlString: String) {
-        let fullPath = "https://image.tmdb.org/t/p/w200\(urlString)"
         
+        let fullPath = "https://image.tmdb.org/t/p/w500\(urlString)"
+
         if let url = URL(string: fullPath) {
             similarMovieImageView.kf.indicatorType = .activity
-            similarMovieImageView.kf.setImage(with: url)
+            similarMovieImageView.kf.setImage(with: url) { result in
+            switch result {
+                case .success(_):
+                    break
+                case .failure(_):
+                    self.similarMovieImageView.image = UIImage(named: "no-image-available.png")
+                }
+            }
         }
+        
     }
     
 }
