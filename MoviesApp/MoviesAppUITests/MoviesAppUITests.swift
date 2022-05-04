@@ -31,10 +31,9 @@ final class MoviesAppUITests: XCTestCase {
         
         app.searchBar.tap()
 
-        app.keys["C"].tap()
-        app.keys["a"].tap()
-        app.keys["r"].tap()
-        app.keys["s"].tap()
+        app.keys["T"].tap()
+        app.keys["o"].tap()
+        app.keys["y"].tap()
         
         XCTAssertTrue(app.isSearchTableViewDisplayed)
         
