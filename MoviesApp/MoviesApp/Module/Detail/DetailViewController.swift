@@ -36,6 +36,7 @@ final class DetailViewController: UIViewController, LoadingShowable {
         super.viewDidLoad()
         accessibilityIdentifiers()
         presenter?.viewDidLoad()
+        configureNavigationBarAndItem()
     }
     
     private func prepareImage(with urlString: String) {
@@ -56,8 +57,27 @@ final class DetailViewController: UIViewController, LoadingShowable {
         
     }
     
+    private func formatDate(with dateString: String) {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+
+        let dateFormatterSet = DateFormatter()
+        dateFormatterSet.dateFormat = "MMM dd, yyyy"
+
+        if let date = dateFormatterGet.date(from: dateString) {
+            self.movieReleaseDateLabel.text = dateFormatterSet.string(from: date)
+        } else {
+           print("There was an error decoding the string")
+        }
+    }
+    
     @IBAction func addFavorites(_ sender: Any) {
         presenter?.addFavoritesButtonTapped()
+    }
+    
+    private func configureNavigationBarAndItem() {
+        self.navigationController?.navigationBar.tintColor = .white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
 }
@@ -87,12 +107,12 @@ extension DetailViewController: DetailViewControllerProtocol {
     }
     
     func showMovieDetail(_ movieDetail: MovieDetailResponse?) {
-            self.prepareImage(with: movieDetail?.backdropPath ?? "")
-            self.movieTitleLabel.text = movieDetail?.title
-            self.movieOverviewLabel.text = movieDetail?.overview
-            guard let voteAverage = movieDetail?.voteAverage else { return }
-            self.movieRatingLabel.text = "\(String(describing: voteAverage))"
-            self.movieReleaseDateLabel.text = movieDetail?.releaseDate
+        prepareImage(with: movieDetail?.backdropPath ?? "")
+        movieTitleLabel.text = movieDetail?.title
+        movieOverviewLabel.text = movieDetail?.overview
+        guard let voteAverage = movieDetail?.voteAverage else { return }
+        movieRatingLabel.text = "\(String(describing: voteAverage))"
+        formatDate(with: movieDetail?.releaseDate ?? "")
     }
     
     func setfavButtonImage(_ systemName: String, isAdded: Bool) {
@@ -121,6 +141,7 @@ extension DetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeCell(cellType: SimilarMovieCell.self, indexPath: indexPath)
+        cell.accessibilityIdentifier = "similarMovieCell_\(indexPath.row)"
         if let similarMovie = presenter?.similarMovie(indexPath.row) {
             cell.cellPresenter = SimilarMovieCellPresenter(view: cell, similarMovie: similarMovie)
         }
@@ -146,6 +167,7 @@ extension DetailViewController {
     func accessibilityIdentifiers() {
         movieTitleLabel.accessibilityIdentifier = "movieTitleLabel"
         favButton.accessibilityIdentifier = "favButton"
+        collectionView.accessibilityIdentifier = "similarMoviesCollectionView"
     }
     
 }

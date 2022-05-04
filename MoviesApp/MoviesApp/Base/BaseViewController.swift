@@ -11,7 +11,6 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     func showAlertForInternetConnection(title: String?, message: String?) {
@@ -22,7 +21,6 @@ class BaseViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             self?.present(alert, animated: true, completion: nil)
         }
-        
     }
     
 }

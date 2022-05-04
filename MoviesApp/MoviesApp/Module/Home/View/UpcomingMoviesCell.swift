@@ -29,10 +29,8 @@ final class UpcomingMoviesCell: UICollectionViewCell {
         }
     }
     
-    private func preparePosterImage(with urlString: String) {
-        
+    private func prepareImage(with urlString: String) {
         let fullPath = "https://image.tmdb.org/t/p/w500\(urlString)"
-
         if let url = URL(string: fullPath) {
             movieImageView.kf.indicatorType = .activity
             movieImageView.kf.setImage(with: url) { result in
@@ -44,7 +42,20 @@ final class UpcomingMoviesCell: UICollectionViewCell {
                 }
             }
         }
-        
+    }
+    
+    private func formatDate(with dateString: String) {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+
+        let dateFormatterSet = DateFormatter()
+        dateFormatterSet.dateFormat = "MMM dd, yyyy"
+
+        if let date = dateFormatterGet.date(from: dateString) {
+            self.movieReleaseDateLabel.text = dateFormatterSet.string(from: date)
+        } else {
+           print("There was an error decoding the string")
+        }
     }
     
 }
@@ -52,7 +63,7 @@ final class UpcomingMoviesCell: UICollectionViewCell {
 extension UpcomingMoviesCell: UpcomingMoviesCellProtocol {
     
     func setImage(_ imageURL: String) {
-        preparePosterImage(with: imageURL)
+        prepareImage(with: imageURL)
     }
     
     func setTitleLabel(_ text: String) {
@@ -64,7 +75,7 @@ extension UpcomingMoviesCell: UpcomingMoviesCellProtocol {
     }
     
     func setReleaseDateLabel(_ text: String) {
-        movieReleaseDateLabel.text = text
+        formatDate(with: text)
     }
     
     

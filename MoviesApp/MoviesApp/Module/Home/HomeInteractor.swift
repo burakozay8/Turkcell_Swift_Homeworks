@@ -11,7 +11,6 @@ protocol HomeInteractorProtocol: AnyObject {
     func fetchNowPlayingMovies()
     func fetchUpcomingMovies()
     func fetchSearchMovie(with query: String)
-    //search, refresh...?
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {

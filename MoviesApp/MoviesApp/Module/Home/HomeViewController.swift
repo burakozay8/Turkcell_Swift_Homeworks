@@ -40,7 +40,9 @@ final class HomeViewController: UIViewController, LoadingShowable {
         presenter?.viewDidLoad()
         searchTableView.isHidden = true
         searchBar.delegate = self
+        self.hideKeyboardWhenTappedAround()
         configureNavigationIcon()
+        configureNavigationBarAndItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +56,11 @@ final class HomeViewController: UIViewController, LoadingShowable {
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         self.navigationItem.titleView = imageView
+    }
+    
+    private func configureNavigationBarAndItem() {
+        self.navigationController?.navigationBar.tintColor = .white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     private func configureSearchBar() {
@@ -142,14 +149,12 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == topCollectionView {
             let topCell = topCollectionView.dequeCell(cellType: NowPlayingMovieCell.self, indexPath: indexPath)
-            topCell.accessibilityIdentifier = "nowPlayingMovieCell_\(indexPath.row)"
             if let nowPlayingMovie = presenter?.nowPlayingMovie(indexPath.row) {
                 topCell.cellPresenter = NowPlayingMoviceCellPresenter(view: topCell, movie: nowPlayingMovie)
             }
             return topCell
         } else {
             let bottomCell = bottomCollectionView.dequeCell(cellType: UpcomingMoviesCell.self, indexPath: indexPath)
-            bottomCell.accessibilityIdentifier = "upcomingMovieCell_\(indexPath.row)"
             if let upcomingMovie = presenter?.upcomingMovie(indexPath.row) {
                 bottomCell.cellPresenter = UpcomingMoviesCellPresenter(view: bottomCell, movie: upcomingMovie)
             }
@@ -187,7 +192,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         } else {
             return 0
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -233,15 +237,33 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.count >= 2 {
-            presenter?.searchMovie(searchText)
-            homeStackView.isHidden = true
-            searchTableView.isHidden = false
-        } else if searchText.isEmpty {
-            homeStackView.isHidden = false
-            searchTableView.isHidden = true
-            searchBar.endEditing(true)
+        
+        presenter?.searchMovie(searchText)
+            
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if searchText.count >= 2 {
+                if self.presenter?.numberOfRowsForSearchedMovies == 0 {
+                    self.homeStackView.isHidden = true
+                    self.searchTableView.isHidden = false
+                    if self.noResultsView != nil && !self.noResultsView.contentView.isHidden {
+                        self.noResultsView?.removeFromSuperview()
+                    }
+                    self.noResultsView = NoResultsView(frame: CGRect(x: 0, y: 0, width: self.searchTableView.frame.width, height: self.searchTableView.frame.height))
+                    self.searchTableView.addSubview(self.noResultsView)
+                } else {
+                    self.noResultsView?.removeFromSuperview()
+                    self.homeStackView.isHidden = true
+                    self.searchTableView.isHidden = false
+                }
+            } else if searchText.isEmpty {
+                self.noResultsView?.removeFromSuperview()
+                self.homeStackView.isHidden = false
+                self.searchTableView.isHidden = true
+                searchBar.endEditing(true)
+            }
+
         }
+
     }
 
 }

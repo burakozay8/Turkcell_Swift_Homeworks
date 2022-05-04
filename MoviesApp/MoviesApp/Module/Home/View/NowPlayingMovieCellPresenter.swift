@@ -26,7 +26,6 @@ final class NowPlayingMoviceCellPresenter {
 extension NowPlayingMoviceCellPresenter: NowPlayingMovieCellPresenterProtocol {
     
     func load() {
-        view?.setTitleLabel("")
         view?.setImageView(movie?.backdropPath ?? "")
     }
     

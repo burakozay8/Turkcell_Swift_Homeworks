@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="403" height="258"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qHs-ty-OSI">
-                                        <rect key="frame" x="5" y="0.0" width="393" height="231.5"/>
+                                        <rect key="frame" x="5" y="0.0" width="393" height="258"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="393" id="029-lA-rF6"/>
                                             <constraint firstAttribute="height" priority="999" constant="180" id="k3f-M0-s3c"/>
@@ -35,12 +35,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marriage Story(2019)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-2X-Ub6">
-                                        <rect key="frame" x="113.5" y="237.5" width="176.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -65,7 +59,6 @@
             <size key="customSize" width="403" height="258"/>
             <connections>
                 <outlet property="movieImageView" destination="qHs-ty-OSI" id="orW-oI-LLB"/>
-                <outlet property="movieTitleLabel" destination="V8h-2X-Ub6" id="rFt-07-dYn"/>
             </connections>
             <point key="canvasLocation" x="510.86956521739137" y="197.54464285714286"/>
         </collectionViewCell>

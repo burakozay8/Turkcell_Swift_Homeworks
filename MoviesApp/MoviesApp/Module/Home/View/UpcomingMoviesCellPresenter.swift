@@ -26,9 +26,9 @@ final class UpcomingMoviesCellPresenter {
 extension UpcomingMoviesCellPresenter: UpcomingMoviesCellPresenterProtcol {
     
     func load() {
-        view?.setImage(movie?.backdropPath ?? "") //
+        view?.setImage(movie?.backdropPath ?? "")
         view?.setTitleLabel(movie?.title ?? "")
-        view?.setOverviewLabel(movie?.overview ?? "") //
+        view?.setOverviewLabel(movie?.overview ?? "")
         view?.setReleaseDateLabel(movie?.releaseDate ?? "")
     }
     

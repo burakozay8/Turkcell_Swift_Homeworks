@@ -22,56 +22,36 @@ final class MoviesAppUITests: XCTestCase {
         
         app.launch()
         
+        app.topCollectionView.waitForExistence(timeout: 2.0)
+        app.bottomCollectionView.waitForExistence(timeout: 2.0)
+        
         XCTAssertTrue(app.isTopCollectionViewDisplayed)
         XCTAssertTrue(app.isBottomCollectionViewDisplayed)
         XCTAssertFalse(app.isSearchTableViewDisplayed)
         
         app.searchBar.tap()
-        app.searchBar.typeText("Cars")
+
+        app.keys["C"].tap()
+        app.keys["a"].tap()
+        app.keys["r"].tap()
+        app.keys["s"].tap()
         
         XCTAssertTrue(app.isSearchTableViewDisplayed)
-//        app.keyboards.buttons["Return"].tap()
         
         app.searchCell.tap()
-//
-//        XCTAssertTrue(app.isTitleLabelDisplayed)
-         XCTAssertTrue(app.isFavButtonDisplayed)
-        //similarcollectiondisplayed.
+
+        XCTAssertTrue(app.isTitleLabelDisplayed)
+        XCTAssertTrue(app.isFavButtonDisplayed)
+        XCTAssertTrue(app.isSimilarMoviesCollectionViewDisplayed)
+        
+        app.similarMovieCell.tap()
+        
+        XCTAssertTrue(app.isFavButtonDisplayed)
+        
+        app.favButton.tap()
         
     }
     
-//    func test_detail_page_elements() {
-//
-////        app.launch()
-////
-////        app.UpcomingMovieCell.tap()
-////
-//////        XCTAssertTrue(app.isTitleLabelDisplayed)
-////        XCTAssertTrue(app.isFavButtonDisplayed)
-//    }
-    
-//
-//    override func tearDownWithError() throws {
-//        // Put teardown code here. This method is called after the invocation of each test method in the class.
-//    }
-//
-//    func testExample() throws {
-//        // UI tests must launch the application that they test.
-//        let app = XCUIApplication()
-//        app.launch()
-//
-//        // Use recording to get started writing UI tests.
-//        // Use XCTAssert and related functions to verify your tests produce the correct results.
-//    }
-//
-//    func testLaunchPerformance() throws {
-//        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-//            // This measures how long it takes to launch your application.
-//            measure(metrics: [XCTApplicationLaunchMetric()]) {
-//                XCUIApplication().launch()
-//            }
-//        }
-//    }
 }
 
 extension XCUIApplication {
@@ -82,10 +62,6 @@ extension XCUIApplication {
     
     var bottomCollectionView: XCUIElement! {
         collectionViews["bottomCollectionView"]
-    }
-    
-    var upcomingMovieCell: XCUIElement! {
-        bottomCollectionView.cells.element(matching: .cell, identifier: "upcomingMovieCell_0")
     }
     
     var searchBar: XCUIElement! {
@@ -101,11 +77,19 @@ extension XCUIApplication {
     }
     
     var titleLabel: XCUIElement! {
-        staticTexts.matching(identifier: "titleLabel").element
+        staticTexts.matching(identifier: "movieTitleLabel").element
     }
     
     var favButton: XCUIElement! {
         buttons["favButton"]
+    }
+    
+    var similarMoviesCollectionView: XCUIElement! {
+        collectionViews["similarMoviesCollectionView"]
+    }
+    
+    var similarMovieCell: XCUIElement! {
+        similarMoviesCollectionView.cells.element(matching: .cell, identifier: "similarMovieCell_1")
     }
     
     var isTopCollectionViewDisplayed: Bool {
@@ -114,10 +98,6 @@ extension XCUIApplication {
     
     var isBottomCollectionViewDisplayed: Bool {
         bottomCollectionView.exists
-    }
-    
-    var isUpcomingMovieCellDisplayed: Bool {
-        upcomingMovieCell.exists
     }
     
     var isSearchTableViewDisplayed: Bool {
@@ -134,6 +114,10 @@ extension XCUIApplication {
     
     var isFavButtonDisplayed: Bool {
         favButton.exists
+    }
+    
+    var isSimilarMoviesCollectionViewDisplayed: Bool {
+        similarMoviesCollectionView.exists
     }
     
 }

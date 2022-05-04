@@ -30,7 +30,7 @@ final class MoviesAppHomeTests: XCTestCase {
         homeRouter = nil
     }
 
-    func test_viewDidLoad_InvokesRequiredMethods() {
+    func test_view_didLoad_invokes_required_methods() {
         XCTAssertFalse(homeView.isTopCollectionViewCreated, "Your value is TRUE but you are expecting FALSE.")
         XCTAssertFalse(homeView.isBottomCollectionViewCreated, "Your value is TRUE but you are expecting FALSE.")
         XCTAssertFalse(homeInteractor.isFetchNowPlayingMoviesInvoked, "Your value is TRUE but you are expecting FALSE.")
@@ -42,11 +42,11 @@ final class MoviesAppHomeTests: XCTestCase {
         XCTAssertTrue(homeView.isBottomCollectionViewCreated, "Your value is FALSE but you are expecting TRUE.")
         XCTAssertTrue(homeInteractor.isFetchNowPlayingMoviesInvoked, "Your value is FALSE but you are expecting TRUE.")
         XCTAssertTrue(homeInteractor.isFetchUpcomingMoviesInvoked, "Your value is FALSE but you are expecting TRUE.")
-        XCTAssertEqual(homeInteractor.invokedFetchNowPlayingMoviesCount, 1) //??
-        XCTAssertEqual(homeInteractor.invokedFetchUpcomingMoviesCount, 1) //??
+        XCTAssertEqual(homeInteractor.invokedFetchNowPlayingMoviesCount, 1)
+        XCTAssertEqual(homeInteractor.invokedFetchUpcomingMoviesCount, 1)
     }
     
-    func test_NowPlayingMovies() {
+    func test_now_playing_movies() {
         XCTAssertFalse(homeView.isHideLoadingInvoked, "Your value is TRUE but you are expecting FALSE.")
         XCTAssertNil(homePresenter.nowPlayingMovie(0)?.title, "Movie title did not come NIL.")
         XCTAssertEqual(homePresenter.numberOfItemsForNowPlayingMovies, 6)
@@ -58,7 +58,7 @@ final class MoviesAppHomeTests: XCTestCase {
         XCTAssertTrue(homeView.isTopCollectionViewReloaded, "Your value is FALSE but you are expecting TRUE.")
     }
     
-    func test_UpcomingMovies() {
+    func test_fetch_upcoming_movies() {
         XCTAssertNil(homePresenter.upcomingMovie(0)?.title, "Movie title did not come NIL.")
         XCTAssertEqual(homePresenter.numberOfItemsForUpcomingMovies, 0)
         XCTAssertFalse(homeView.isBottomCollectionViewReloaded, "Your value is TRUE but you are expecting FALSE.")
@@ -68,7 +68,7 @@ final class MoviesAppHomeTests: XCTestCase {
         XCTAssertTrue(homeView.isBottomCollectionViewReloaded, "Your value is FALSE but you are expecting TRUE.")
     }
 
-    func test_SearchMovie_InvokesRequiredMethods() {
+    func test_search_movie_invokes_required_methods() {
         XCTAssertFalse(homeView.isTableViewCreated, "Your value is TRUE but you are expecting FALSE.")
         XCTAssertFalse(homeInteractor.isFetchSearchMovieInvoked, "Your value is TRUE but you are expecting FALSE.")
         XCTAssertEqual(homeInteractor.invokedFetchSearchMovieCount, 0)
@@ -78,7 +78,7 @@ final class MoviesAppHomeTests: XCTestCase {
         XCTAssertEqual(homeInteractor.invokedFetchSearchMovieCount, 1)
     }
     
-    func test_SearchedMovies() {
+    func test_fetch_searched_movies() {
         XCTAssertNil(homePresenter.searchedMovie(0)?.title, "Movie title did not come NIL.")
         XCTAssertEqual(homePresenter.numberOfRowsForSearchedMovies, 0)
         XCTAssertFalse(homeView.isTableViewReloaded, "Your value is TRUE but you are expecting FALSE.")

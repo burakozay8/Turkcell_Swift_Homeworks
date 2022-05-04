@@ -10,13 +10,11 @@ import Kingfisher
 
 protocol NowPlayingMovieCellProtocol: AnyObject {
     func setImageView(_ imageURL: String)
-    func setTitleLabel(_ text: String)
 }
 
 final class NowPlayingMovieCell: UICollectionViewCell {
 
     @IBOutlet private weak var movieImageView: UIImageView!
-    @IBOutlet private weak var movieTitleLabel: UILabel!
     
     var cellPresenter: NowPlayingMovieCellPresenterProtocol? {
         didSet {
@@ -48,15 +46,6 @@ extension NowPlayingMovieCell: NowPlayingMovieCellProtocol {
 
     func setImageView(_ imageURL: String) {
         prepareBackDropImage(with: imageURL)
-    }
-    
-    func setTitleLabel(_ text: String) {
-//         let movieTitleLabel = UILabel(frame: CGRect(x: 10, y: 200, width: movieImageView.frame.width - 10, height: 30))
-         movieTitleLabel.text = text
-//         movieTitleLabel.textColor = UIColor.white
-//         movieTitleLabel.font = UIFont(name:"chalkboard SE", size: 18)
-//         movieImageView.addSubview(movieTitleLabel)
-        
     }
     
 }

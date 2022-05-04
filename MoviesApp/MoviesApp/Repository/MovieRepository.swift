@@ -41,7 +41,7 @@ class MovieRepository {
         do {
             let results = try context.fetch(fetchRequest)
             if results.count > 0 {
-                for result in results as! [NSManagedObject]{
+                for result in results as! [NSManagedObject] {
                     guard let id = result.value(forKey: "id") as? Int else { return }
                     if id == movieID {
                         context.delete(result)
@@ -63,9 +63,9 @@ class MovieRepository {
     
     func checkMovieIsInFavorites(movieID: Int) -> Bool {
         var isFavorite: Bool = false
-        
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieEntity")
+        
         do {
             let results = try context.fetch(fetchRequest)
             if results.count > 0 {
@@ -80,6 +80,7 @@ class MovieRepository {
         } catch {
             print("Couldn't fetch data.")
         }
+        
         return isFavorite
     }
 

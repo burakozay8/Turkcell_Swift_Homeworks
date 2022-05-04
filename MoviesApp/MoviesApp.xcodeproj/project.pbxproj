@@ -33,7 +33,6 @@
 		42922CEA281D4ECA0054D631 /* SimilarMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = 42922CE9281D4ECA0054D631 /* SimilarMovies.json */; };
 		42E24CAA281538F4004074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E24CA9281538F4004074F8 /* AppDelegate.swift */; };
 		42E24CAC281538F4004074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E24CAB281538F4004074F8 /* SceneDelegate.swift */; };
-		42E24CAE281538F4004074F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E24CAD281538F4004074F8 /* ViewController.swift */; };
 		42E24CB1281538F4004074F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E24CAF281538F4004074F8 /* Main.storyboard */; };
 		42E24CB4281538F4004074F8 /* MoviesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42E24CB2281538F4004074F8 /* MoviesApp.xcdatamodeld */; };
 		42E24CB6281538F6004074F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E24CB5281538F6004074F8 /* Assets.xcassets */; };
@@ -74,6 +73,7 @@
 		42E333A1281C0E2C005BEAC6 /* MockHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E333A0281C0E2C005BEAC6 /* MockHomeInteractor.swift */; };
 		42FC3CFE281AB32D00871F95 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FC3CFD281AB32D00871F95 /* MovieRepository.swift */; };
 		42FC3D00281ADFE700871F95 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FC3CFF281ADFE700871F95 /* UIColor.swift */; };
+		42FD3ED928215E7A0016DAF8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD3ED828215E7A0016DAF8 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +121,6 @@
 		42E24CA6281538F4004074F8 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E24CA9281538F4004074F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E24CAB281538F4004074F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42E24CAD281538F4004074F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42E24CB0281538F4004074F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42E24CB3281538F4004074F8 /* MoviesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesApp.xcdatamodel; sourceTree = "<group>"; };
 		42E24CB5281538F6004074F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +162,7 @@
 		42E333A0281C0E2C005BEAC6 /* MockHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeInteractor.swift; sourceTree = "<group>"; };
 		42FC3CFD281AB32D00871F95 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		42FC3CFF281ADFE700871F95 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		42FD3ED828215E7A0016DAF8 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,9 +266,6 @@
 				42E24CE0281539CD004074F8 /* Resources */,
 				42E24CDF281539AF004074F8 /* Network */,
 				42E24CE4281539FE004074F8 /* Module */,
-				42E24CAD281538F4004074F8 /* ViewController.swift */,
-				42E24CAF281538F4004074F8 /* Main.storyboard */,
-				42E24CB7281538F7004074F8 /* LaunchScreen.storyboard */,
 				42E24CBA281538F7004074F8 /* Info.plist */,
 			);
 			path = MoviesApp;
@@ -297,6 +294,8 @@
 			children = (
 				42E24CA9281538F4004074F8 /* AppDelegate.swift */,
 				42E24CAB281538F4004074F8 /* SceneDelegate.swift */,
+				42E24CAF281538F4004074F8 /* Main.storyboard */,
+				42E24CB7281538F7004074F8 /* LaunchScreen.storyboard */,
 				42E24CB5281538F6004074F8 /* Assets.xcassets */,
 			);
 			path = Application;
@@ -339,6 +338,7 @@
 				427AEF402817F82000FBD9FB /* UIView.swift */,
 				42757CA728195B7500274FB6 /* UITableView.swift */,
 				42FC3CFF281ADFE700871F95 /* UIColor.swift */,
+				42FD3ED828215E7A0016DAF8 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -599,7 +599,6 @@
 				42FC3D00281ADFE700871F95 /* UIColor.swift in Sources */,
 				42E24CF428154786004074F8 /* Router.swift in Sources */,
 				42757CA528195AE000274FB6 /* SearchCell.swift in Sources */,
-				42E24CAE281538F4004074F8 /* ViewController.swift in Sources */,
 				42E24D2028158819004074F8 /* UICollectionViewCell.swift in Sources */,
 				42E24D00281562E7004074F8 /* SplashRouter.swift in Sources */,
 				42E24D08281568DE004074F8 /* HomeInteractor.swift in Sources */,
@@ -609,6 +608,7 @@
 				42E24CAA281538F4004074F8 /* AppDelegate.swift in Sources */,
 				42E24CF72815576B004074F8 /* SplashViewController.swift in Sources */,
 				426D1E842816E81C008FB8C5 /* DetailViewController.swift in Sources */,
+				42FD3ED928215E7A0016DAF8 /* UIViewController.swift in Sources */,
 				42757CA828195B7500274FB6 /* UITableView.swift in Sources */,
 				42E24D05281568A7004074F8 /* HomeViewController.swift in Sources */,
 				426D1E872816E84B008FB8C5 /* DetailInteractor.swift in Sources */,

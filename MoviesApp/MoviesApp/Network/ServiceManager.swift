@@ -10,7 +10,7 @@ import Alamofire
 
 protocol MoviesServiceProtocol {
     func getNowPlayingMovies(completionHandler: @escaping (MoviesResult) -> ())
-    func getUpcomingMovies(completionHandler: @escaping (MoviesResult) -> ()) //page?
+    func getUpcomingMovies(completionHandler: @escaping (MoviesResult) -> ())
     func getSearchMovie(query: String, completionHandler: @escaping (MoviesResult) -> ())
     func getMovieDetail(movieID: Int, completionHandler: @escaping (MovieDetailResult) -> ())
     func getSimilarMovies(movieID: Int, completionHandler: @escaping (MoviesResult) -> ())

@@ -17,7 +17,7 @@ final class NetworkManager {
     
     let reachabilityManager = NetworkReachabilityManager()?.isReachable
     
-    func isConnectedToInternet() -> Bool { //computed prop.
+    func isConnectedToInternet() -> Bool {
         return reachabilityManager ?? false
     }
     

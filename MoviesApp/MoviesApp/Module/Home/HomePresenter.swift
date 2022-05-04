@@ -9,13 +9,13 @@ import Foundation
 
 protocol HomePresenterProtocol {
     func viewDidLoad()
+    func searchMovie(_ text: String?)
     var numberOfItemsForNowPlayingMovies: Int { get }
     var numberOfItemsForUpcomingMovies: Int { get }
     var numberOfRowsForSearchedMovies : Int { get }
     func nowPlayingMovie(_ index: Int) -> MovieResult?
     func upcomingMovie(_ index: Int) -> MovieResult?
     func searchedMovie(_ index: Int) -> MovieResult?
-    func searchMovie(_ text: String?)
     func didSelectItemAtForNowPlayingMovies(index: Int)
     func didSelectItemAtForUpcomingMovies(index: Int)
     func didSelectRowAtForSearchedMovies(index: Int)
@@ -29,7 +29,7 @@ final class HomePresenter {
     
     private var nowPlayingMovies: [MovieResult] = []
     private var upcomingMovies: [MovieResult] = []
-    private var searchedMovies: [MovieResult] = [] //boyle mi olmalı??
+    private var searchedMovies: [MovieResult] = []
     
     init(view: HomeViewControllerProtocol?, interactor: HomeInteractorProtocol?, router: HomeRouterProtocol?) {
         self.view = view
@@ -115,7 +115,7 @@ extension HomePresenter: HomeInteractorOutputProtocol {
             nowPlayingMovies = moviesResult.results ?? []
             view?.reloadDataForTopCollectionView()
         case .failure(let error):
-            print(error) // alert göster.
+            print(error)
         }
     }
     

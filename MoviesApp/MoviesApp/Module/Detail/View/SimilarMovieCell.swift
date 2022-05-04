@@ -24,7 +24,7 @@ final class SimilarMovieCell: UICollectionViewCell {
         }
     }
     
-    private func preparePosterImage(with urlString: String) {
+    private func prepareImage(with urlString: String) {
         
         let fullPath = "https://image.tmdb.org/t/p/w500\(urlString)"
 
@@ -47,7 +47,7 @@ final class SimilarMovieCell: UICollectionViewCell {
 extension SimilarMovieCell: SimilarMovieCellProtocol {
     
     func setImageView(_ imageURL: String) {
-        preparePosterImage(with: imageURL)
+        prepareImage(with: imageURL)
     }
     
     func setTitleLabel(_ text: String) {
